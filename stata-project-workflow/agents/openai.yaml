@@ -1,0 +1,12 @@
+interface:
+  display_name: Stata Project Workflow
+  short_description: Fast, explicit Stata projects with standard data and output workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
