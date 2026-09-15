@@ -1,0 +1,12 @@
+interface:
+  display_name: Causal Inference
+  short_description: Design and audit causal identification, methods, and Stata code
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

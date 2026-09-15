@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure review</title>
+<style>
+:root{--ink:#182c42;--muted:#5b6777;--border:#dae2ea;--bg:#f3f6f9;--accent:#075e83}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}main{max-width:1150px;margin:auto;padding:34px 25px}h1{font-size:32px;line-height:1.35}h2{font-size:23px;margin-top:42px}p{margin:10px 0}.muted{color:var(--muted)}.panel{background:white;padding:22px 28px;border:1px solid var(--border);border-radius:12px;margin:22px 0}.toolbar{display:flex;flex-wrap:wrap;gap:12px;position:sticky;top:0;background:#f3f6f9f5;padding:14px 0;z-index:5}input,select,button{font:inherit;padding:8px 12px;border:1px solid #afc0cf;border-radius:6px;background:white;color:var(--ink)}input{flex:1;min-width:220px}button{cursor:pointer}nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:var(--accent);text-decoration:none;background:white;border:1px solid var(--border);padding:4px 10px;border-radius:6px}details.figure{background:white;border:1px solid var(--border);border-radius:9px;margin:15px 0;overflow:hidden}summary{padding:16px 20px;cursor:pointer;line-height:1.5}summary .filename{font-family:ui-monospace,monospace;font-size:13px;overflow-wrap:anywhere}summary .caption{display:block;margin-left:17px;font-size:14px;color:var(--muted);padding-top:6px}.badge{display:inline-block;border-radius:20px;padding:3px 11px;margin-right:10px;font-weight:700;background:#e8eff5;color:#1e496b}.s5{background:#d8ece5;color:#185a43}.s4{background:#e1eef8;color:#164f7a}.s1,.s2{background:#f0f0f0;color:#606872}.body{padding:0 22px 20px}.body img{max-width:100%;height:auto;display:block;margin:18px auto;border:1px solid var(--border)}dl{display:grid;grid-template-columns:110px 1fr;gap:10px 15px}dt{font-weight:bold;color:var(--accent)}dd{margin:0}.source{font:12px/1.5 ui-monospace,monospace;color:var(--muted);overflow-wrap:anywhere}.hidden{display:none!important}.note{border-left:4px solid #bb8a34;padding:8px 16px;background:#fbf7ee}pre{white-space:pre-wrap;font:inherit}@media(max-width:650px){main{padding:20px 12px}.panel{padding:16px}dl{grid-template-columns:1fr;gap:4px}dd{margin-bottom:12px}}@media print{.toolbar,nav{display:none}body{background:white}details.figure{break-inside:avoid}main{padding:0}}
+</style>
+</head>
+<body><main>
+<p class="muted">PROJECT / DATA / DATE</p>
+<h1>Figure-by-figure review and importance rating</h1>
+<div class="panel"><pre>Scope and rating rules...</pre></div>
+<div class="panel"><h2 style="margin-top:0">Key conclusions</h2><pre>Executive summary...</pre></div>
+<nav><a href="#group-1">group-1 (1)</a></nav>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="Search filename, metric, or interpretation">
+  <select id="score"><option value="0">All ratings</option><option value="5">5+</option><option value="4">4+</option><option value="3">3+</option><option value="2">2+</option><option value="1">1+</option></select>
+  <button onclick="expandVisible(true)">Expand visible figures</button>
+  <button onclick="expandVisible(false)">Collapse</button>
+  <span id="count"></span>
+</div>
+<section class="group" id="group-1"><h2>group-1</h2>
+<details class="figure" id="fig-001" data-score="5">
+  <summary><span class="badge s5">5/5</span><strong>001</strong> <span class="filename">example.png</span><span class="caption">Core paper evidence</span></summary>
+  <div class="body">
+    <dl>
+      <dt>Figure meaning</dt><dd>...</dd>
+      <dt>Facts in the figure</dt><dd>...</dd>
+      <dt>Role in the paper story</dt><dd>...</dd>
+      <dt>Interpretation boundary</dt><dd>...</dd>
+    </dl>
+    <img loading="lazy" src="data:image/png;base64,REPLACE_ME" alt="example.png">
+    <p class="source">figures/group-1/example.png</p>
+  </div>
+</details>
+</section>
+<script>
+const cards=[...document.querySelectorAll("details.figure")];
+function filter(){const q=document.querySelector("#q").value.toLowerCase();const s=+document.querySelector("#score").value;let n=0;for(const c of cards){const show=+c.dataset.score>=s&&c.textContent.toLowerCase().includes(q);c.classList.toggle("hidden",!show);if(show)n++;}for(const g of document.querySelectorAll(".group"))g.classList.toggle("hidden",!g.querySelector("details:not(.hidden)"));document.querySelector("#count").textContent=n+" / "+cards.length;}
+function expandVisible(open){for(const c of cards)if(!c.classList.contains("hidden"))c.open=open;}
+document.querySelector("#q").addEventListener("input",filter);
+document.querySelector("#score").addEventListener("change",filter);
+function revealHash(){const el=document.querySelector(location.hash||"#none");if(el&&el.matches("details"))el.open=true;}
+window.addEventListener("hashchange",revealHash);filter();revealHash();
+</script>
+</main></body></html>

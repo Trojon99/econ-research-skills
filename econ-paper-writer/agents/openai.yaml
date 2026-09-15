@@ -1,0 +1,14 @@
+interface:
+  display_name: Economics Paper Writer
+  short_description: Write polished, source-grounded economics papers
+  default_prompt: Use $econ-paper-writer to turn my notes and verified Zotero sources
+    into polished LaTeX prose.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
