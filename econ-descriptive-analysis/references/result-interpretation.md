@@ -71,6 +71,8 @@ Examples:
 
 ## HTML/report layout
 
+For HTML UI structure, navigation, and search behavior, also read `references/html-report-layout.md`.
+
 When producing an HTML interpretation report, use a consistent card or section for each item:
 
 `Figure N. Title` or `Table N. Title`
