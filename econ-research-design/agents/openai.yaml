@@ -1,6 +1,6 @@
 interface:
   display_name: Econ Research Design
-  short_description: 通过对话与最新文献打磨经济学选题、识别策略和潜在贡献
+  short_description: 通过对话与最新文献打磨经济学选题、研究设计、偏好测量和潜在贡献
   default_prompt: 使用 $econ-research-design 和我打磨经济学研究设计，优先分析我上传的材料。
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
