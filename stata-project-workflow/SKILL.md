@@ -1,6 +1,6 @@
 ---
 name: stata-project-workflow
-description: Use when ChatGPT creates, edits, reviews, debugs, optimizes, refactors, or organizes Stata projects, including .do/.ado files, master pipelines, data folders, merges, validation, logs, intermediate datasets, tables, figures, regressions, reproducible research outputs, and HTML result-review reports. Apply the user's explicit, performance-oriented Stata workflow: modular numbered do-files run from one master file, minimal expensive loops, bulk operations, fail-fast validation, early data reduction, reproducible execution, and the standard project layout code, data/original, data/output, data/temp, data/work, doc, and log.
+description: "Use when ChatGPT creates, edits, reviews, debugs, optimizes, refactors, or organizes Stata projects, including .do/.ado files, master pipelines, data folders, merges, validation, logs, intermediate datasets, tables, figures, regressions, reproducible research outputs, and HTML result-review reports. Apply the user's explicit, performance-oriented Stata workflow: modular numbered do-files run from one master file, minimal expensive loops, bulk operations, fail-fast validation, early data reduction, reproducible execution, and the standard project layout code, data/original, data/output, data/temp, data/work, doc, and log."
 ---
 
 # Stata Project Workflow
