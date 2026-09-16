@@ -1,6 +1,6 @@
 interface:
-  display_name: Stata Project Workflow
-  short_description: Fast, explicit Stata projects with standard data and output workflow.
+  display_name: Econ Project Workflow
+  short_description: Reproducible economics projects across Stata, Python, R, Julia, and mixed workflows.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
