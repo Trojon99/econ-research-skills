@@ -21,6 +21,7 @@ Keep the interaction conversational. Do not force a fixed mentor, collaborator, 
 - Do not equate the newest paper with the best or newest viable idea.
 - Do not autonomously overwrite, abandon, or promote a user's active idea. Present evidence-based changes for the user's judgment.
 - Keep causal claims aligned with the proposed design and structural claims aligned with model primitives, moments, counterfactuals, and equilibrium logic.
+- Keep preference-elicitation claims aligned with the target preference object, elicitation task, utility model, scale identification, and decision context. Do not equate stated preferences with revealed behavior, welfare, or policy treatment effects without additional assumptions.
 - Respond in the user's language unless asked otherwise.
 
 ## Diagnose the Entry Point
@@ -35,6 +36,7 @@ Infer the entry point without asking the user to choose a mode:
 | Policy or institution | Identify affected agents, timing, incentives, treatment or rule, comparison, equilibrium response, and welfare relevance. |
 | Existing question | Locate the weakest link among importance, precision, evidence, identification, mechanism, contribution, feasibility, and audience. |
 | Stalled project | Diagnose whether the binding problem is the question, measurement, design, model, literature position, result dependence, or audience. |
+| Preference or valuation study | Identify whose preferences, over what object, for which decision, and which trade-off or utility object is required before choosing DCE, BWS, WTP/WTA, TTO, SG, or another method. |
 
 Do not treat these paths as separate modes. Let them converge on a provisional research question and move backward whenever new evidence undermines an earlier premise.
 
@@ -90,6 +92,18 @@ Use conditional decision language instead of false certainty:
 - **Not supported yet / park:** the available evidence does not justify the question or the required design is not feasible under current constraints.
 
 Explain the binding reason and the cheapest informative next step. Avoid numerical scores unless the user requests them.
+
+## Design or Audit Preference Elicitation
+
+Read [preference-elicitation.md](references/preference-elicitation.md) whenever the user asks about preference elicitation, stated or revealed preferences, patient preferences, discrete choice experiments (DCEs), conjoint analysis, best-worst scaling (BWS), contingent valuation, WTP/WTA, TTO, standard gamble, health-state valuation, or related methods.
+
+Start from four questions: **whose preferences, over what object, for which decision, and which estimand or trade-off is needed?** Choose the elicitation method only after these are clear. Do not default to DCE merely because it is common in health economics.
+
+For DCEs, explicitly audit attributes and levels, choice-set construction, outside option/status quo, experimental design and priors, pilot and sample-size logic, coding, repeated-choice panel structure, estimator, preference heterogeneity, scale heterogeneity, attribute non-attendance or simplifying heuristics, WTP/MRS/risk-trade-off calculations, uncertainty, internal validity, reliability, and external validity.
+
+Do not compare raw utility coefficients across groups as pure taste differences without considering scale. Do not rank attribute importance from raw coefficient magnitudes when coding or level ranges differ. Do not treat a treatment-choice DCE as interchangeable with TTO/SG health-state utility valuation.
+
+If a study uses experimentally varied survey attributes to infer stated choices, distinguish that experimental choice-task interpretation from the causal effect of implementing the corresponding real-world policy or treatment. Use the causal-inference skill for the latter.
 
 ## Map the Literature
 
@@ -157,7 +171,7 @@ When explicitly requested, tailor the deliverable to the user's requested format
 2. economic stake, agents, and object;
 3. evidence from uploaded materials, followed by Zotero and online additions;
 4. closest-literature map and unresolved issue;
-5. proposed evidence, identification, theory, or structural strategy;
+5. proposed evidence, identification, theory, preference-elicitation, measurement, or structural strategy;
 6. rival explanations and falsifiers;
 7. defensible relative contribution;
 8. strongest objections and unresolved evidence gaps;
