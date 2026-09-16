@@ -11,6 +11,7 @@ A growing collection of reusable AI skills for economics research, from research
 | `econ-descriptive-analysis` | Produce research-design-oriented descriptive analysis, diagnostics, and figures, including relative-time parallel-trends protocols. |
 | `stata-project-workflow` | Organize fast, explicit, reproducible, and auditable Stata research projects. |
 | `econ-paper-writer` | Draft and revise source-grounded economics prose and LaTeX while preserving research meaning. |
+| `seminar-companion` | Find the latest working-paper version, open with Title / Research Question / Empirical Methodology / Data / Main Evidence, and follow academic seminars live. |
 
 ## Repository structure
 
