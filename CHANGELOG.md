@@ -4,6 +4,20 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.3.1] - 2026-09-16
+
+HTML results-report presentation refinement.
+
+### Added
+- Added `econ-descriptive-analysis/references/html-report-layout.md` for reusable external-facing HTML report structure.
+- Standardized a compact navigation card immediately below the report header, with language-matched links for Summary/Figures/Tables/Interpretation Scope/Overall Story.
+- Added a functional client-side search field at the far right of the navigation row, including responsive behavior and no external JavaScript dependency.
+
+### Changed
+- Updated `econ-descriptive-analysis` so HTML interpretation/showcase reports explicitly load the HTML layout protocol in addition to the result-interpretation protocol.
+- Kept the established navigation-row visual composition as the default when an existing report or screenshot provides that pattern.
+- Preserved the distinction between internal diagnostic notes and polished external-facing interpretation.
+
 ## [0.3.0] - 2026-09-16
 
 Project-workflow architecture expansion.
