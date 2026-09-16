@@ -1,3 +1,8 @@
+---
+name: econ-research-design
+description: Use for conversationally choosing, framing, refining, positioning, or stress-testing economics research topics before writing, including reduced-form, theoretical, structural, measurement, policy, and preference-elicitation work. Trigger for vague topics, datasets, policies, literature-gap ideas, stalled projects, DCE/conjoint analysis, BWS, WTP/WTA, TTO, standard gamble, patient preferences, or health-state valuation. Prioritize current uploads, then Zotero, then verified online sources.
+---
+
 # Econ Research Design
 
 ## Purpose
