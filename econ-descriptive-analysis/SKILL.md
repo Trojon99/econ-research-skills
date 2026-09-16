@@ -47,11 +47,12 @@ Prefer figures whenever a figure can communicate the empirical pattern clearly. 
    - Compact regression/robustness summaries when the user explicitly wants exact coefficients.
    - Do not duplicate a figure with a large table unless exact numbers are needed.
 
-6. Interpret the figures economically.
-   - State what pattern is visible.
-   - State what the pattern can and cannot establish.
-   - Connect the pattern to identification, sample support, or mechanism.
-   - Flag suspicious discontinuities, seasonality, composition changes, or nonparallel movements for follow-up.
+6. Interpret the figures and tables economically.
+   - Read `references/result-interpretation.md` whenever interpreting results, assembling a results story, or producing an HTML/PDF/Word-style interpretation report.
+   - Number every displayed figure and table consistently.
+   - For each item, state what it shows, why it matters, what it can and cannot establish, how it connects to identification/sample support/mechanism, and the minimum interpretation notes needed for the intended audience.
+   - Classify each item's role as Core, Supporting, Diagnostic, or Appendix.
+   - Keep internal diagnostic concerns separate from external-facing presentation. Do not expose an internal to-do list in material intended for supervisors, coauthors, seminars, or other readers, but do not hide a limitation that would materially change the meaning or credibility of the result.
 
 ## Figure selection rules
 
@@ -144,6 +145,7 @@ Unless the user requests otherwise, provide:
 2. Code or analysis that creates the figure-ready summary data.
 3. The figures themselves or graph-export code.
 4. Only the minimum supporting tables needed for exact values and auditability.
-5. A brief interpretation of what each major figure contributes to the research design.
+5. A numbered, item-by-item interpretation of every displayed figure and table following `references/result-interpretation.md`.
+6. A separate synthesis that assembles the results into a coherent economic story after the item-level interpretation.
 
 If the user explicitly says to prefer figures over tables, make figures the dominant output and keep tables in the background for verification only.
