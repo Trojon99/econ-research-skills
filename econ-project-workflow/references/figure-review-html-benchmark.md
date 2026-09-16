@@ -1,6 +1,6 @@
 # Figure-review HTML benchmark
 
-Use this specification whenever generating an HTML review of Stata figures/results. The canonical visual and interaction benchmark is the project's designated reference figure-review HTML. Match its behavior and information architecture unless the user explicitly requests a different layout.
+Use this specification whenever generating an HTML review of research figures/results. The canonical visual and interaction benchmark is the project's designated reference figure-review HTML when one exists. Match its behavior and information architecture unless the user explicitly requests a different layout. If no project-specific benchmark exists, use the bundled template and this specification as the default.
 
 ## Page structure
 

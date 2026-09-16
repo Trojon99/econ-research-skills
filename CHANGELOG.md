@@ -2,11 +2,29 @@
 
 This repository is actively maintained. Significant changes to skill behavior, routing, methodology coverage, or repository structure are recorded here.
 
-The project follows a lightweight Semantic Versioning convention:
+The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
-- **MAJOR**: breaking changes to skill names, interfaces, or core workflow assumptions.
-- **MINOR**: new skills, substantial new methodological modules, or meaningful capability expansions.
-- **PATCH**: bug fixes, documentation corrections, routing refinements, and non-breaking maintenance.
+## [0.3.0] - 2026-09-16
+
+Project-workflow architecture expansion.
+
+### Added
+- Added `econ-project-workflow` as the language-independent economics research project workflow.
+- Added a stable cross-language project contract for `code/`, `data/original/`, `data/work/`, `data/temp/`, `data/output/`, `doc/`, and `log/`.
+- Added language-independent guidance for a single project entrypoint, modular stages, data lifecycle, caching, fail-fast validation, reproducibility, cross-language handoffs, and research outputs.
+- Added `references/stata.md` as the first detailed implementation backend, preserving the existing Stata performance, validation, output, and coding conventions.
+- Added explicit extension points for future Python, R, Julia, and mixed-language backend guidance without creating one top-level skill per language.
+
+### Changed
+- Replaced the top-level `stata-project-workflow` skill with `econ-project-workflow`.
+- Generalized figure/result review guidance so it is not tied to Stata-generated figures.
+- Updated `seminar-companion` routing so implementation/workflow questions across Stata, Python, R, Julia, and mixed-language projects route to `econ-project-workflow`.
+- Updated README architecture and versioning rules to reflect the broader workflow layer.
+
+### Migration
+- Existing Stata projects should continue using the same folder contract and Stata conventions; those rules now live under `econ-project-workflow/references/stata.md`.
+- ChatGPT installations should replace `stata-project-workflow` with the validated `econ-project-workflow` package to avoid duplicate workflow skills.
+- GitHub `main` remains the source of truth.
 
 ## [0.2.1] - 2026-09-16
 
