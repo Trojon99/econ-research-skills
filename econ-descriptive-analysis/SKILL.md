@@ -1,3 +1,8 @@
+---
+name: econ-descriptive-analysis
+description: Empirical-economics descriptive analysis with a graph-first workflow. Use when ChatGPT is asked to plan, code, review, or interpret descriptive statistics, trends, subgroup comparisons, sample composition, seasonality, baseline characteristics, raw DID/DDD cells, parallel-trends graphs, event-study figure diagnostics, or pre-regression diagnostics for microdata or panel data, especially in Stata projects. Prefer informative figures over tables, preserve exact-value audit files when useful, and align every descriptive output with the research design rather than mechanically summarizing all variables.
+---
+
 # Empirical Descriptive Analysis
 
 ## Core rule

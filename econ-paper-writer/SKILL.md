@@ -1,3 +1,8 @@
+---
+name: econ-paper-writer
+description: Write, translate, reorganize, review, humanize, and polish English economics papers using only user-provided materials and verified items in the user's Zotero library. Use for Chinese-to-English academic translation, English polishing, editorial review for logic, information density, tone, and claim discipline, removing generic or AI-like prose patterns, diagnosing AI-flavored writing, turning notes or results into paper prose, drafting source-grounded literature reviews, editing LaTeX or Overleaf text, describing tables and figures, and writing reduced-form, quantitative structural, or data-disciplined economics papers. Preserve the author's research claims and do not act as a research-design collaborator.
+---
+
 # Economics Paper Writer
 
 Produce publication-oriented economics prose while preserving the author's substantive meaning. Treat writing execution and research judgment as separate tasks.

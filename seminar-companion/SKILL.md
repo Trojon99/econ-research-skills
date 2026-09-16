@@ -89,7 +89,19 @@ Prefer concise answers during the live talk. Expand only when the user asks for 
 
 If the user asks “什么意思”, “这一步在干嘛”, or equivalent, answer the immediate conceptual question first. Do not bury the explanation under a full-paper recap.
 
-## 4. Economics and causal-identification lens
+## 4. Method routing
+
+Keep seminar-companion as a live workflow layer rather than duplicating detailed methodological content.
+
+- For full causal-design questions or estimator audits, route to the `causal-inference` skill.
+- For preference elicitation, DCE/conjoint, BWS, WTP/WTA, TTO, standard gamble, patient-preference, or health-state valuation questions, route to the preference-elicitation module under `econ-research-design`.
+- For graph-first descriptive diagnostics, sample support, raw DID/DDD paths, seasonality, or parallel-trends figure construction, route to `econ-descriptive-analysis`.
+- For Stata implementation, project structure, runtime, reproducibility, or code organization, route to `stata-project-workflow`.
+- For drafting or revising paper prose from seminar materials, route to `econ-paper-writer`.
+
+During the live seminar, keep the answer compact even when using these deeper frameworks. Surface the result of the routed analysis rather than reproducing another skill's full checklist unless the user asks for a full audit.
+
+## 5. Economics and causal-identification lens
 
 When the paper is empirical economics, actively track:
 
@@ -113,7 +125,7 @@ Do not mechanically list all possible threats. Surface only those connected to t
 
 When a point requires a full causal-design audit, use the causal-inference skill as a complementary analysis if it is available.
 
-## 5. Questions worth asking
+## 6. Questions worth asking
 
 When the user asks what they could ask the presenter, propose questions that are specific to the paper and answerable by the presenter.
 
@@ -129,7 +141,7 @@ Avoid performative, vague, or generic seminar questions. Explain in one sentence
 
 Do not label a concern as fatal unless the evidence actually supports that conclusion. Distinguish “I do not yet understand this” from “the design may fail here.”
 
-## 6. End-of-seminar synthesis
+## 7. End-of-seminar synthesis
 
 Only when requested, summarize the talk using the accumulated seminar context rather than restarting from the abstract.
 
