@@ -49,6 +49,7 @@ Prefer figures whenever a figure can communicate the empirical pattern clearly. 
 
 6. Interpret the figures and tables economically.
    - Read `references/result-interpretation.md` whenever interpreting results, assembling a results story, or producing an HTML/PDF/Word-style interpretation report.
+   - When producing an HTML interpretation/showcase report, also read `references/html-report-layout.md` and use its standard navigation row, section anchors, and functional search field.
    - Number every displayed figure and table consistently.
    - For each item, state what it shows, why it matters, what it can and cannot establish, how it connects to identification/sample support/mechanism, and the minimum interpretation notes needed for the intended audience.
    - Classify each item's role as Core, Supporting, Diagnostic, or Appendix.
@@ -147,5 +148,6 @@ Unless the user requests otherwise, provide:
 4. Only the minimum supporting tables needed for exact values and auditability.
 5. A numbered, item-by-item interpretation of every displayed figure and table following `references/result-interpretation.md`.
 6. A separate synthesis that assembles the results into a coherent economic story after the item-level interpretation.
+7. For HTML reports, a compact navigation row immediately below the header with section links on the left and a functional report search field on the far right, following `references/html-report-layout.md`.
 
 If the user explicitly says to prefer figures over tables, make figures the dominant output and keep tables in the background for verification only.
