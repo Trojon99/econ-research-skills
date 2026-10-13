@@ -1,0 +1,4 @@
+interface:
+  display_name: "Structural and Quantitative Economics"
+  short_description: "Model identification, estimation, validation, and welfare"
+  default_prompt: "Use $econ-structural-research to develop or audit a structural or quantitative economics project. Start from the economic question, identify parameters and assumptions, validate real numerical results, and state counterfactual and welfare limits."

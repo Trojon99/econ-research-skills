@@ -1,75 +1,115 @@
 # Econ Research Skills
 
-**Current version:** `v0.3.0`  
-**Maintenance status:** Actively maintained  
-**Last updated:** 2026-09-16  
+**Current version:** `v0.4.0`
+
+**Maintenance status:** Actively maintained
+
+**Last updated:** 2026-10-13
+
 **Source of truth:** GitHub `main`
 
-A growing collection of reusable AI skills for economics research, from research design and empirical analysis to academic writing, causal inference, project workflows, and future macroeconometric and quantitative-method modules.
+Reusable AI skills for economics research: research design, causal inference, descriptive analysis, structural and quantitative modeling, reproducible project workflows, academic writing, and seminar support.
 
 ## Skills
 
 | Skill | Purpose |
 | --- | --- |
-| `econ-research-design` | Develop and stress-test economics research questions, literature positioning, evidence strategies, contributions, and preference-elicitation designs. |
-| `causal-inference` | Design and audit causal identification strategies, estimands, inference, and implementation choices. |
-| `econ-descriptive-analysis` | Produce research-design-oriented descriptive analysis, diagnostics, and figures, including relative-time parallel-trends protocols. |
-| `econ-project-workflow` | Organize reproducible, auditable, performance-aware economics research projects across Stata, Python, R, Julia, and mixed-language workflows. |
-| `econ-paper-writer` | Draft and revise source-grounded economics prose and LaTeX while preserving research meaning. |
-| `seminar-companion` | Find the latest working-paper version, open with Title / Research Question / Empirical Methodology / Data / Main Evidence, and follow academic seminars live. |
+| [econ-research-design](econ-research-design/SKILL.md) | Develop and stress-test research questions, literature positioning, evidence strategies, contributions, and preference-elicitation designs. |
+| [causal-inference](causal-inference/SKILL.md) | Design and audit causal identification, estimands, inference, and implementation choices. |
+| [econ-descriptive-analysis](econ-descriptive-analysis/SKILL.md) | Produce graph-first descriptive analysis, sample diagnostics, and relative-time parallel-trends figures. |
+| [econ-structural-research](econ-structural-research/SKILL.md) | Specify and identify structural models, estimate or calibrate parameters, validate solvers, and audit counterfactuals and welfare. |
+| [econ-project-workflow](econ-project-workflow/SKILL.md) | Organize reproducible economics projects across Stata, Python, R, Julia, and mixed-language workflows. |
+| [econ-paper-writer](econ-paper-writer/SKILL.md) | Draft and revise source-grounded economics prose and LaTeX while preserving the author's substantive meaning. |
+| [seminar-companion](seminar-companion/SKILL.md) | Find the newest available paper version, provide an opening research briefing, and support live seminar discussion. |
 
-## Architecture
+## Architecture and boundaries
 
-The library is organized by research function rather than by estimator, programming language, or narrow method.
+Organize by research function, not by individual estimator, language, or dataset.
 
-- `econ-research-design` is the upstream research-design layer. It frames questions, maps evidence strategies, positions literature, and routes specialized methodological work.
-- `causal-inference` handles identification, estimands, estimator-design fit, inference, and causal-method audits.
-- `econ-descriptive-analysis` handles graph-first pre-regression diagnostics, sample support, trends, raw DID/DDD patterns, and descriptive event-time evidence.
-- `econ-project-workflow` governs repository architecture, data lifecycle, project entrypoints, performance, reproducibility, validation, outputs, and implementation backends. Stata-specific conventions live under its references rather than as a separate top-level skill.
-- `econ-paper-writer` handles source-grounded writing and editing without silently redesigning the research.
-- `seminar-companion` is a cross-cutting live workflow layer that can route deeper methodological and implementation questions to the relevant skill.
+- **Research design** frames the economic uncertainty, evidence strategy, and relative contribution. It is conversational by default, not an unsolicited proposal generator.
+- **Causal inference** evaluates identifying variation and assumptions. It does not infer causality from statistical significance or an estimator's label.
+- **Descriptive analysis** diagnoses patterns and sample support. It does not promote descriptive differences into causal effects.
+- **Structural research** addresses primitives, identification, solution validation, equilibrium feedback, counterfactuals, and welfare. It does not treat fit as identification or force every question into a structural model.
+- **Project workflow** governs data lifecycle, entrypoints, validation, performance, and outputs. Preserve immutable raw data and auditable transformations.
+- **Paper writing** preserves source-grounded research meaning. Writing execution is not permission to silently redesign the study.
+- **Seminar support** is a live cross-cutting workflow, with deeper methodological work handled by the relevant module.
 
-Detailed methods or implementation backends that do not require their own top-level workflow should live as references under the most natural parent skill. For example, preference elicitation is maintained under `econ-research-design/references/preference-elicitation.md`, and Stata implementation conventions are maintained under `econ-project-workflow/references/stata.md`.
+Detailed methods and implementation conventions belong under their natural parent. For example, [preference elicitation](econ-research-design/references/preference-elicitation.md) lives under research design and [Stata conventions](econ-project-workflow/references/stata.md) under project workflow. Keep a small number of distinct top-level modules.
 
 ## Repository structure
 
-Each skill follows the ChatGPT Skills directory convention:
+Each skill has a standalone entrypoint and optional supporting material:
 
 ```text
 skill-name/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
-├── references/    # optional
+├── references/    # optional, loaded as needed
 └── assets/        # optional
 ```
 
-`SKILL.md` is the entry point. Supporting references contain domain-specific protocols and backend guidance; assets contain reusable templates or icons.
+`SKILL.md` contains the operating instructions. `agents/openai.yaml` provides presentation metadata for compatible OpenAI skill surfaces; Hermes primarily discovers `SKILL.md`. References contain detailed protocols; assets contain templates or icons. Platform-specific metadata does not imply all platforms expose the same tools.
+
+Repository maintenance files are kept outside skill bundles:
+
+- [VERSION](VERSION): machine-readable library version.
+- [CHANGELOG.md](CHANGELOG.md): significant behavior and architecture changes.
+- [CONTRIBUTING.md](CONTRIBUTING.md): maintenance and synchronization rules.
+- [scripts/validate_repository.py](scripts/validate_repository.py): packaging checks.
+- [tests/test_validate_repository.py](tests/test_validate_repository.py): regression tests for those checks.
+
+## Installation and use
+
+These are reusable instructions, not model weights or a training dataset. Installing a skill makes it discoverable; the assistant loads its entrypoint and relevant references when the task requires them. It does not permanently load every document into every conversation.
+
+### Hermes
+
+On the machine that owns the intended Hermes profile, install a skill with:
+
+```bash
+hermes -p <profile> skills install Trojon99/econ-research-skills/econ-research-design --category research
+```
+
+Replace `<profile>` with the actual profile ID. Repeat using any skill slug listed above. Before replacing an existing installation, back up and compare local changes; do not force-overwrite a locally customized skill without reviewing the differences. Follow the security scan and confirmation prompts. Do not install into a remote research-execution machine merely because the assistant's terminal happens to run there.
+
+The skills are at the repository root, not under `skills/`; do not assume a registry tap's default `skills/` path will discover them. Direct skill identifiers avoid that ambiguity.
+
+After installation, verify each skill is discoverable with `skills_list` and readable with `skill_view`, including linked reference files. Use the installed skill through natural-language tasks; supporting references should be loaded selectively.
+
+### Other skill-compatible assistants
+
+Install the complete skill directory, not just `SKILL.md`, using the platform's supported workflow. Keep relative reference and asset paths intact. Where an instruction names a Hermes tool, use the platform's equivalent permitted capability rather than inventing that tool API.
 
 ## Versioning and maintenance
 
-The repository uses a lightweight Semantic Versioning convention.
+The library uses lightweight Semantic Versioning:
 
-- During `0.x` development, **MINOR** versions may include architectural changes or top-level skill renames while the library is still stabilizing.
-- During `0.x` development, **PATCH** versions cover bug fixes, documentation corrections, routing refinements, and other non-breaking maintenance.
-- Starting with `1.0.0`, **MAJOR** versions will indicate breaking changes to skill names, interfaces, or core workflow assumptions; **MINOR** versions will add backward-compatible capabilities; **PATCH** versions will remain for fixes and maintenance.
+- During `0.x`, MINOR releases may add modules or change architecture and naming.
+- During `0.x`, PATCH releases cover non-breaking corrections and refinements.
+- Starting with `1.0.0`, MAJOR indicates breaking changes, MINOR backward-compatible additions, and PATCH fixes.
 
-The machine-readable current version is stored in [`VERSION`](VERSION). Significant changes are recorded in [`CHANGELOG.md`](CHANGELOG.md).
+Keep README, `VERSION`, and the newest changelog entry consistent. The first formally versioned release is `v0.2.0`; earlier history remains in Git without retroactively assigned versions.
 
-The first formally versioned release is `v0.2.0`. Earlier repository history predates formal versioning and is retained through Git history rather than retroactively assigning release numbers.
+Run the local packaging checks from the repository root:
 
-Methodological references and implementation-backend references are updateable snapshots rather than a frozen canon. When recency matters, skills should verify current papers, publication status, regulatory guidance, software documentation, and package behavior before giving method-specific advice.
+```bash
+python3 scripts/validate_repository.py
+python3 -m unittest discover -s tests -v
+```
 
-## Design principles
+These checks assess metadata consistency, skill packaging, catalog coverage, and local inline Markdown links. They do not validate external URLs, citations, methodological correctness, solver convergence, or economic identification. Verify those separately when relevant.
 
-These skills are intended to make economics research workflows more explicit and reproducible. Across modules, they emphasize estimand-first reasoning, source verification, transparent assumptions, research-design diagnostics, auditable code, calibrated claims, stable data-flow semantics, and clean boundaries between research design, causal inference, implementation, and writing.
+## Research principles
 
-Prefer a small number of well-separated top-level skills over one skill per estimator, language, or task. Add a new top-level skill only when the workflow, mental model, inputs, and outputs are materially distinct from existing modules.
+Prioritize accuracy, skepticism, reproducibility, explicit reasoning, and verifiable sources. Preserve exact samples and economic objects; distinguish description, correlation, identification, maintained assumptions, and interpretation. Never invent citations, data access, statistics, or computation results. Use methods proportional to the question. Discussion defaults to Chinese and formal research writing to academic English unless requested otherwise.
+
+Methodological and software references are updateable snapshots, not a frozen canon. Re-verify current papers, publication status, institutional details, and package behavior when recency matters.
 
 ## Planned expansion
 
-The library is designed to grow beyond the current applied-micro and reduced-form workflow. Likely future top-level modules include quantitative structural economics and macroeconometrics. Additional implementation backends such as Python, R, and Julia should normally be added as references under `econ-project-workflow` unless they eventually require a genuinely distinct workflow.
+Structural and quantitative research now has a dedicated workflow. Dedicated macroeconometric guidance remains a possible future extension, not a currently shipped module. Python, R, and Julia implementation guides should normally extend `econ-project-workflow`; Stata currently has the detailed backend reference.
 
 ## License
 
-No license has been added yet. Public visibility allows the repository to be read, but reuse rights remain reserved unless a license is added later.
+No license has been added. Public visibility permits reading but does not itself grant an open-source reuse license. Any licensing change requires an explicit owner decision.

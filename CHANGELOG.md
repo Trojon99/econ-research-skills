@@ -4,6 +4,25 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.0] - 2026-10-13
+
+Unified empirical and structural research coverage and repository maintenance.
+
+### Added
+- Added `econ-structural-research`, adapted from the Economic Research bot's local workflow, for structural identification, calibration and estimation, solver validation, counterfactual closure, and auditable welfare analysis.
+- Added its `agents/openai.yaml` presentation metadata.
+- Added `CONTRIBUTING.md` with scope, source verification, versioning, validation, and safe synchronization guidance.
+- Added `scripts/validate_repository.py` and regression tests for repository metadata and local Markdown-link consistency. These checks validate packaging, not the truth of methodological claims or external citations.
+
+### Changed
+- Updated README coverage, module links, installation instructions, and planned expansion.
+- Aligned README and `VERSION` at `0.4.0`; corrected the prior README/`VERSION` mismatch.
+- Preserved all six existing skill names, entrypoint content, and supporting files.
+
+### Maintenance
+- GitHub `main` remains the maintained source of truth. Installing these documents provides reusable instructions, not model retraining or permanently loaded context.
+- No license was selected or added; licensing remains an explicit owner decision.
+
 ## [0.3.1] - 2026-09-16
 
 HTML results-report presentation refinement.
