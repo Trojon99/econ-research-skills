@@ -38,3 +38,17 @@ The validator checks packaging: version agreement, required entrypoint metadata,
 5. Verify each entrypoint and all referenced local files are present and readable; record the source commit and any intentionally retained local differences.
 6. Skills are on-demand instructions. Read the relevant entrypoint and references for the research task; do not claim installation retrained the language model or validated all economic methods.
 7. Keep reusable lessons in the appropriate skill. Maintain repository-controlled improvements in GitHub as well; do not let local edits silently drift from the source of truth.
+
+
+## Owner-authorized incremental publication
+
+The repository owner may explicitly authorize direct commits and normal fast-forward pushes to `main` for reviewed incremental references and minimal routing or maintenance changes; a PR is not required under that authorization. Without it, use the agreed review workflow. Major changes to core methodological rules require substantive review. Never force-push, weaken branch protections, change licensing, or silently resolve substantive conflicts.
+
+Before publication:
+
+1. Confirm the repository, authenticated account, owner authorization, clean checkout, and current remote base. Back up or record the exact source and target hashes.
+2. Whitelist public files. Exclude personal paths, project-specific overlays and benchmarks, private research details, credentials, logs, AppleDouble metadata, raw data, and complete copyrighted papers. Do not upload a profile directory.
+3. Review each lesson against the actually read source and support sections/pages. Separate author claims from proposed diagnostics; retain reading scope, assumptions, rival explanations, and limitations. Working-paper evidence is provisional, not consensus.
+4. Run repository validation, unit tests, `git diff --check`, and a privacy/secret scan of additions. Inspect the complete staged diff and stage exact paths. Update version, README, and changelog consistently; non-breaking reference refinements normally use PATCH. Packaging tests do not validate economic claims.
+5. Commit and push normally only after every gate passes. Stop on failed checks, permission errors, concurrent remote changes requiring review, or conflicts; preserve the proposed update and report the blocker.
+6. Read the exact remote commit and changed files back. Record the commit URL, file hashes, checks, and intentionally retained local preferences or overlays. Publishing instructions is not model training.

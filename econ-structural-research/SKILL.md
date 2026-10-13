@@ -69,6 +69,10 @@ Specify whose welfare, the metric, discounting, baseline, aggregation and distri
 
 Keep conversational design advice proportional to the current question. Do not produce a full proposal or select a narrative on the user's behalf unless requested. For requested computation, deliver exercised code and actual outputs, with convergence, residuals, fit versus validation, uncertainty, and run provenance. Clearly state any blocked or incomplete acceptance criterion and the cheapest informative repair.
 
+## Optional frontier reference
+
+Load `references/nber-frontier.md` when approximate latent-variable estimation or capacity-policy counterfactuals are relevant. These full-text-grounded working-paper lessons are provisional and do not replace the workflow or local project overlays.
+
 ## Pitfalls
 
 - Complexity does not fix absent identifying variation or poorly measured objects.

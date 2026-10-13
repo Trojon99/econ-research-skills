@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.0`
+**Current version:** `v0.4.1`
 
 **Maintenance status:** Actively maintained
 
@@ -99,6 +99,10 @@ python3 -m unittest discover -s tests -v
 ```
 
 These checks assess metadata consistency, skill packaging, catalog coverage, and local inline Markdown links. They do not validate external URLs, citations, methodological correctness, solver convergence, or economic identification. Verify those separately when relevant.
+
+## Incremental frontier references
+
+Optional, provisional full-text-grounded lessons are available for [sensitive-outcome measurement](causal-inference/references/nber-frontier.md) and [approximate estimation and allocation-policy counterfactuals](econ-structural-research/references/nber-frontier.md). See the [weekly review workflow](econ-research-design/references/weekly-nber-idea-refresh.md) for coverage, reading boundaries, and evidence gates. Public synchronization follows the owner authorization and checks in [CONTRIBUTING.md](CONTRIBUTING.md); local project overlays and preferences remain local.
 
 ## Research principles
 

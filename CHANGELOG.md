@@ -4,6 +4,17 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.1] - 2026-10-13
+
+### Added
+- Added provisional frontier references on sensitive-outcome measurement (NBER w35891), indirect variational inference (w35877), and capacity-constrained allocation counterfactuals (w35893), with source versions, reading scope, support pages, and bounded interpretation.
+- Added minimal on-demand routes in causal inference and structural research.
+
+### Changed
+- Strengthened the generic weekly NBER workflow with programmatic batch coverage, persistent reading states, explicit full-text/appendix boundaries, and evidence-gated incremental publication. Deployment-specific preferences remain local.
+- Documented owner-authorized normal pushes to main after source, privacy, validation, tests, and staged-diff checks; authorization does not bypass protections or substantive review.
+- Aligned VERSION and README at 0.4.1. No license change. Packaging checks remain distinct from research-claim verification.
+
 ## [0.4.0] - 2026-10-13
 
 Unified empirical and structural research coverage and repository maintenance.

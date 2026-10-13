@@ -169,6 +169,7 @@ Do not upgrade a verdict merely because many robustness checks are statistically
 
 ## References
 
+- `references/nber-frontier.md`: load on demand for provisional, full-text-grounded lessons on sensitive-outcome measurement and protocol randomization; do not treat working-paper findings as consensus.
 - `references/method-map.md`: method-specific assumptions, failure modes, and routing.
 - `references/stata-audit.md`: Stata implementation and code-review protocol.
 - `references/literature-verification.md`: source hierarchy, current-literature search, and citation verification.
