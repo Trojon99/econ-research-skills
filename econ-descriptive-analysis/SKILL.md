@@ -151,3 +151,7 @@ Unless the user requests otherwise, provide:
 7. For HTML reports, a compact navigation row immediately below the header with section links on the left and a functional report search field on the far right, following `references/html-report-layout.md`.
 
 If the user explicitly says to prefer figures over tables, make figures the dominant output and keep tables in the background for verification only.
+
+## Optional applied reference
+
+Load `references/nonlinear-binned-functions.md` on demand for nonlinear binned functions, controls and inference boundaries. This reference distinguishes tutorial reading, primary-source checks and unexecuted software; it does not establish numerical validation.

@@ -85,3 +85,7 @@ Load `references/nber-frontier.md` when approximate latent-variable estimation o
 ## Verification
 
 Before claiming completion, check that the research question and model objects are explicit; every reported parameter has an identification or external-value justification; all calculations come from actual runs; solver and equilibrium diagnostics pass or failures are disclosed; targets and independent validation are distinguished; counterfactual closure and welfare assumptions are stated; and provenance and uncertainty are documented. Cite only sources actually verified and never invent empirical results or citations.
+
+## Optional applied reference
+
+Load `references/evidence-to-equilibrium.md` on demand for reduced-form evidence, structural identification and equilibrium closure. This reference distinguishes tutorial reading, primary-source checks and unexecuted software; it does not establish numerical validation.

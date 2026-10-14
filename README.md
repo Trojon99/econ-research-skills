@@ -1,10 +1,10 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.1`
+**Current version:** `v0.4.2`
 
 **Maintenance status:** Actively maintained
 
-**Last updated:** 2026-10-13
+**Last updated:** 2026-10-14
 
 **Source of truth:** GitHub `main`
 
@@ -103,6 +103,10 @@ These checks assess metadata consistency, skill packaging, catalog coverage, and
 ## Incremental frontier references
 
 Optional, provisional full-text-grounded lessons are available for [sensitive-outcome measurement](causal-inference/references/nber-frontier.md) and [approximate estimation and allocation-policy counterfactuals](econ-structural-research/references/nber-frontier.md). See the [weekly review workflow](econ-research-design/references/weekly-nber-idea-refresh.md) for coverage, reading boundaries, and evidence gates. Public synchronization follows the owner authorization and checks in [CONTRIBUTING.md](CONTRIBUTING.md); local project overlays and preferences remain local.
+
+## Applied-method references
+
+Bounded applied lessons are available for [estimands and inference](causal-inference/references/applied-estimand-inference.md), [nonlinear binned functions](econ-descriptive-analysis/references/nonlinear-binned-functions.md), and [evidence to equilibrium](econ-structural-research/references/evidence-to-equilibrium.md). These distinguish complete tutorial reading from selected primary-source checks; software execution and full proof audits are not claimed.
 
 ## Research principles
 

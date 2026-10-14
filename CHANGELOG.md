@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.2] - 2026-10-14
+
+### Added
+- Added applied references synthesizing eight Lianxh tutorials with selected primary-source checks: estimands and inference, nonlinear binned functions, and reduced-form evidence to equilibrium counterfactuals.
+- Added minimal on-demand routing in causal inference, descriptive analysis, and structural research without copying deployment-specific entrypoint overlays.
+
+### Boundaries
+- Preserved source links, reading levels, identification and software caveats. No software execution, full proof audit, or complete site coverage is claimed.
+- Aligned VERSION and README at 0.4.2; no license or local project data changes.
+
 ## [0.4.1] - 2026-10-13
 
 ### Added
