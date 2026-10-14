@@ -227,3 +227,5 @@ Actively look for:
 - panel code relying on implicit sort order.
 
 Do not mechanically remove every loop or abstraction. Prioritize changes with a clear correctness, performance, reproducibility, or auditability benefit.
+
+Weight/sample audit: `(rawsum)` inside a weighted `collapse` ignores weight magnitudes but still excludes zero-weight observations; it is not an all-row raw count. Keep a separately unweighted sample ledger when that denominator is needed. See `sample-transform-audit.md` and the [official collapse manual](https://www.stata.com/manuals/dcollapse.pdf), Weights/rawsum/cw. The example is not a benchmark-tested equivalence claim.

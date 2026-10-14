@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.4] - 2026-10-14
+
+### Added
+- Consolidated evidence from 36 additional tutorial-text readings and targeted original-source checks into six topical applied audits: DID, IV, RD, synthetic controls, sample transformations, and measurement/sensitivity.
+- Added minimal routes, a model-onboarding extension, and a weighted rawsum denominator caveat while retaining earlier references.
+
+### Boundaries
+- Preserved transparent exploratory workflows, source/reading-level distinctions, access failures and unresolved software/version issues. No Stata/R/MATLAB execution or complete proof review is claimed.
+- Public entrypoints originate from the current public baseline, not private profile overlays. Aligned VERSION and README at 0.4.4; no license change.
+
 ## [0.4.3] - 2026-10-14
 
 ### Added

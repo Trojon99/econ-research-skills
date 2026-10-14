@@ -178,3 +178,10 @@ Do not upgrade a verdict merely because many robustness checks are statistically
 ## Optional applied reference
 
 Load `references/applied-estimand-inference.md` on demand for applied estimands, selection, design-based and spatial inference. This reference distinguishes tutorial reading, primary-source checks and unexecuted software; it does not establish numerical validation.
+
+## Applied audit routing
+
+- `references/did-target-sensitivity.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+- `references/iv-identification-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+- `references/rd-running-variable-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+- `references/synthetic-control-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.

@@ -89,3 +89,7 @@ Before claiming completion, check that the research question and model objects a
 ## Optional applied reference
 
 Load `references/evidence-to-equilibrium.md` on demand for reduced-form evidence, structural identification and equilibrium closure. This reference distinguishes tutorial reading, primary-source checks and unexecuted software; it does not establish numerical validation.
+
+## Model onboarding
+
+For a minimal data-to-model onboarding map, toolkit scope and closure choices, also load `references/evidence-to-equilibrium.md`. Do not equate inversion, parameter identification and successful solver termination.

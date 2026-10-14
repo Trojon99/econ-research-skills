@@ -36,3 +36,7 @@
 - 实践：分开审计随机分配层、处理概率、目标人口权重、群规模与随机抽样/固定样本随机化。不同层处理比例下，普通 strata-FE 系数不自动等于人数加权 ATE。
 - 所查 sreg 的 `cluster()` 指随机分配单位，可改变点估计及方差，不是通用 VCE 开关；层编号/配对顺序、缺失删除后的支撑和实际调整状态应审计。官方示例也需要检查处理后控制，不从可运行推断因果适当。
 - 支持：[连享会正文](https://www.lianxh.cn/details/1948.html)；[sreg官方help](https://raw.githubusercontent.com/jutrifonov/sreg-stata/main/ado/sreg.sthlp)；[实现说明](https://raw.githubusercontent.com/jutrifonov/sreg-stata/main/docs/estimators.md)；[Bugni等设定与定理陈述](https://arxiv.org/html/1806.04206)。边界：未执行 sreg、未复现 Monte Carlo，文章应用控制的测量时点未独立查数据字典；观察性分组不是随机化层。
+
+## Further audits by method
+
+For DID target/scale/trend sensitivity see `did-target-sensitivity.md`; for IV assignment/strength see `iv-identification-audit.md`; for RD support/output semantics see `rd-running-variable-audit.md`; for donor support and interval targets see `synthetic-control-audit.md`. Existing applied lessons and local project supplements remain unchanged.

@@ -183,3 +183,7 @@ When explicitly requested, tailor the deliverable to the user's requested format
 9. feasibility, pilot, and decision gate.
 
 Label unsupported elements as provisional. Do not make the requested document sound more settled than the preceding dialogue warrants.
+
+## Applied audit routing
+
+- `references/measurement-sensitivity-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.

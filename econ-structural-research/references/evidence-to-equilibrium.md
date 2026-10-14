@@ -23,3 +23,11 @@
 ## 复制学习边界
 
 [ARSW2015 toolkit](https://github.com/Ahlfeldt/ARSW2015-toolkit)所读README说明它是部分模型量化的教学子集，不是全部论文复现。先核验数据/工具箱/内存和文件差异，再在授权环境做最小测试。读取文档、成功执行、数值验证和掌握模型为不同成果；本次没有执行MATLAB或复核所有附录证明。
+
+## 最小模型的入门验收
+
+从观测数量/份额与条件样本出发，连结参数、给定参数反演的基本面、行为方程、清算/规范化、政策变化与福利。只加反事实需要的选择模块；分离识别、反演唯一、算法退出与均衡选择。记录贸易平衡空间单元、赤字/财政闭合、人口与供给是否内生，检查标准化残差、约束、份额加总与多初值，再使用未进入校准/反演的事实验证。改变率求解可减少恢复水平基本面的需要，不自动减少识别假设。
+
+来源：[连享会1960](https://www.lianxh.cn/details/1960.html)、[1968](https://www.lianxh.cn/details/1968.html)完整文字阅读记录；[Low–Meghir](https://doi.org/10.1257/jep.31.2.33) separability/validation相关片段；[Redding–Rossi-Hansberg](https://www.princeton.edu/~reddings/pubpapers/ARQSM-2017.pdf)引言与§2.7.4；[SciPy root官方说明](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html) Returns/examples。success只表示算法成功退出，不能代替经济方程残差与可行性验收。
+
+[AB2022](https://github.com/Ahlfeldt/AB2022-toolkit)及[MRRH2018](https://github.com/Ahlfeldt/MRRH2018-toolkit)仅README定向阅读，后者明确教学变体不对应论文实质分析。工具包范围、平台/依赖和修改文件先审，未运行Stata/MATLAB，不以教学包或时间安排宣称全论文复现/模型掌握。
