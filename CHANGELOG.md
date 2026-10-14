@@ -4,6 +4,10 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.5] - 2026-10-14
+
+- Clarify per-image reading coverage and cross-check article prose against visible regression outputs.
+
 ## [0.4.4] - 2026-10-14
 
 ### Added

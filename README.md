@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.4`
+**Current version:** `v0.4.5`
 
 **Maintenance status:** Actively maintained
 
