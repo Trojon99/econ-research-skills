@@ -32,6 +32,66 @@ class RepositoryValidationTests(unittest.TestCase):
             text=True, capture_output=True, check=False,
         )
 
+    def test_backtick_bundle_files_must_exist(self):
+        entry = self.root / "test-skill/SKILL.md"
+        original = entry.read_text(encoding="utf-8")
+        for folder, filename in [("references", "guide.md"), ("assets", "image.svg"), ("templates", "ledger.json"), ("scripts", "check.py")]:
+            with self.subTest(folder=folder):
+                relative = f"{folder}/{filename}"
+                entry.write_text(original + f"Read `{relative}`.\n", encoding="utf-8")
+                result = self.run_validator()
+                self.assertNotEqual(result.returncode, 0, "missing backtick file must fail")
+                self.assertIn(relative, result.stdout)
+                file = self.root / "test-skill" / relative
+                file.parent.mkdir(exist_ok=True)
+                file.write_text("Synthetic fixture", encoding="utf-8")
+                self.assertEqual(self.run_validator().returncode, 0)
+                nested = self.root / "test-skill/references/nested.md"
+                nested.parent.mkdir(exist_ok=True)
+                nested.write_text(f"Load `{relative}` from the bundle.\n", encoding="utf-8")
+                self.assertEqual(self.run_validator().returncode, 0)
+        entry.write_text(original + "Use `test-skill/templates/ledger.json`.\n", encoding="utf-8")
+        self.assertEqual(self.run_validator().returncode, 0)
+
+    def test_root_historical_unqualified_reference_requires_unique_bundle_file(self):
+        guide = self.root / "test-skill/references/guide.md"
+        guide.parent.mkdir()
+        guide.write_text("Synthetic fixture", encoding="utf-8")
+        readme = self.root / "README.md"
+        readme.write_text(readme.read_text(encoding="utf-8") + "History: moved `references/guide.md` into a skill.\n", encoding="utf-8")
+        self.assertEqual(self.run_validator().returncode, 0)
+        readme.write_text(readme.read_text(encoding="utf-8") + "Missing `references/absent.md`.\n", encoding="utf-8")
+        self.assertNotEqual(self.run_validator().returncode, 0)
+
+    def test_fenced_illustrations_and_broad_descriptors_are_not_file_references(self):
+        entry = self.root / "test-skill/SKILL.md"
+        original = entry.read_text(encoding="utf-8")
+        for fence in ("~~~", "   ````"):
+            with self.subTest(fence=fence):
+                entry.write_text(original + f"\n{fence}text\n`references/missing.md`\n[Example](templates/missing.json)\n{fence}\n" +
+                                 "Broad legacy descriptors: `references/`, `assets/*.svg`, `templates/<name>.json`.\n", encoding="utf-8")
+                result = self.run_validator()
+                self.assertEqual(result.returncode, 0, result.stdout)
+                with entry.open("a", encoding="utf-8") as handle:
+                    handle.write("Actual `scripts/missing.py`.\n")
+                self.assertNotEqual(self.run_validator().returncode, 0)
+
+    def test_ci_is_read_only_pinned_and_runs_package_checks(self):
+        workflow = SCRIPT.parents[1] / ".github/workflows/validate.yml"
+        self.assertTrue(workflow.is_file(), "CI workflow missing")
+        text = workflow.read_text(encoding="utf-8")
+        self.assertIn("contents: read", text)
+        self.assertIn("persist-credentials: false", text)
+        self.assertIn("actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683", text)
+        self.assertIn("actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065", text)
+        self.assertIn('python-version: ["3.11", "3.13"]', text)
+        for command in ("python -m unittest discover -s tests -v", "python scripts/validate_repository.py",
+                        "python econ-project-workflow/scripts/validate_learning_ledger.py econ-project-workflow/templates/learning-ledger.json"):
+            self.assertIn(command, text)
+        self.assertNotIn("secrets.", text)
+        self.assertNotIn("upload-artifact", text)
+        self.assertNotIn("pull_request_target", text)
+
     def test_accepts_consistent_packaging(self):
         result = self.run_validator()
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

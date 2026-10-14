@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.6`
+**Current version:** `v0.4.7`
 
 **Maintenance status:** Actively maintained
 
@@ -115,6 +115,22 @@ Applied audit coverage also includes [DID targets and trend sensitivity](causal-
 
 
 Targeted references additionally cover [panel/dynamic DML](causal-inference/references/dml-panel-audit.md), [mediation estimands](causal-inference/references/mediation-estimands-audit.md), [AI text measurement](econ-research-design/references/text-measurement-inference.md), [bounded and quantile outcomes](econ-descriptive-analysis/references/bounded-quantile-outcomes.md), and [common-factor panel inference](causal-inference/references/common-factor-panel-audit.md). Existing DID and applied-estimand references integrate outcome-scale and treatment-version lessons without replacing local project supplements.
+
+## Incremental knowledge learning
+
+For supplied articles, books and chapters, use the [shared distillation protocol](econ-project-workflow/references/knowledge-distillation.md): register actual source/edition scope, read a coherent part, extract candidates, check critical support, compare with existing knowledge, integrate or defer, and verify the receipt. Conceptual knowledge goes into subject references; repeatable decisions go into skills; original sources, private project implications and reading records stay local. Chapter completion is not complete-book reading.
+
+Use the [empty ledger](econ-project-workflow/templates/learning-ledger.json), [field contract](econ-project-workflow/templates/learning-ledger.schema.json) and [topic-note template](econ-project-workflow/templates/topic-knowledge-note.md). The source and lesson lifecycle supports candidates, rechecks, explicit conflicts and replacement rather than append-only summaries. No vault writes or schedules are created implicitly.
+
+Check a task ledger through the permitted terminal:
+
+```bash
+python3 econ-project-workflow/scripts/validate_learning_ledger.py /authorized/task/learning-ledger.json
+```
+
+Replace the illustrative path with the actual authorized task file. Add `--root /authorized/repository` to check promotion targets against the selected checkout. This read-only helper validates declarations, identifiers, cross-references and target containment; it does not read sources, execute tutorial code or prove a claim true. Keep real task ledgers outside public Git.
+
+[Behavior cases](evaluations/README.md) test reasoning only when actually run and reviewed. The GitHub workflow runs packaging and ledger integrity checks, not research ingestion, external LLM calls or scientific certification.
 
 ## Research principles
 

@@ -85,6 +85,8 @@ Use NBER as a discovery source. Search beyond NBER before asserting novelty or a
 
 ## Accumulate Transferable Skill Knowledge
 
+Use the shared protocol through `skill_view(name="econ-project-workflow", file_path="references/knowledge-distillation.md")` when the skill is installed, or read that reference from its repository bundle. It defines candidate states, conflicts, evidence levels and promotion. Do not assume sibling skill directories share a filesystem parent. Keep this weekly guide's batch discovery and paper coverage rules.
+
 1. Read the target skill and its existing references before writing; search for the same lesson and strengthen it rather than duplicating it.
 2. Admit a lesson only when the relevant full text has been read and supports the transferable claim. Store the official link, paper number, version, reading level, and supporting section/page when verified. Separate the authors' result from the assistant's generalization; include assumptions, applicability, rival explanations, and remaining limits. A new working paper is not automatically a settled methodological rule.
 3. Integrate by knowledge subject into a small set of existing references. Use a topical frontier reference only when the parent has no suitable home; do not create per-paper or per-week files. Add a short entrypoint pointer only when needed. Keep shared evidence gates in the entrypoint or its reference routing; keep deployment-specific user preferences local.

@@ -4,6 +4,20 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.7] - 2026-10-14
+
+### Added
+- A shared incremental reading-to-distillation protocol for articles, books and chapters, with edition/coverage, evidence declarations, conflicts and replacement states.
+- A portable private learning-ledger contract, empty ledger and topic-note templates, and a dependency-free declaration/cross-reference checker.
+- Manual reasoning regression cases and read-only CI for packaging and ledger checks; no automatic LLM evaluations or paid API calls.
+
+### Changed
+- Shortened skill discovery descriptions while retaining substantive triggers in the body; connected intake and weekly learning to the shared protocol.
+- Extended repository path checks to load-on-demand code-span references as well as inline Markdown links.
+
+### Boundaries
+- Source acquisition, source truth, mathematical proofs, scientific correctness and assistant case performance are not certified by schema or CI checks. No new source-reading counts, model training, full-source publication or license changes are claimed.
+
 ## [0.4.6] - 2026-10-14
 
 ### Added

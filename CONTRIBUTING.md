@@ -40,6 +40,16 @@ The validator checks packaging: version agreement, required entrypoint metadata,
 7. Keep reusable lessons in the appropriate skill. Maintain repository-controlled improvements in GitHub as well; do not let local edits silently drift from the source of truth.
 
 
+## Incremental distillation maintenance
+
+Use [the shared protocol](econ-project-workflow/references/knowledge-distillation.md) and [ledger contract](econ-project-workflow/templates/learning-ledger.schema.json) for new learning tasks. Do not require retroactive rewriting of historical ledgers, and never fill missing historical evidence with guessed values. Books require edition and actual chapter/section coverage; article, image and primary-source coverage remain separate. Store real ledgers and full sources outside this public repository.
+
+When integrating a new lesson, compare the existing topic, record duplicate/extension/narrowing/conflict/replacement, and retire replaced wording rather than accumulating incompatible rules. Keep source locators, versions, assumptions and limits with each meaningful claim. A checked implementation is not a universal method guarantee. The empty template is a zero-coverage starting point, not evidence of completed learning.
+
+Run the dependency-free learning-ledger checker on new task records and the complete unittest suite when changing its contract. Update schema, template, implementation and tests together. CI runs structure and integrity checks only. Use [manual reasoning cases](evaluations/README.md) for consequential behavior changes and preserve actual outputs/rubric review separately; do not say the assistant passed because the case file exists.
+
+Do not publish a private ledger, source body, book chapter, evaluation response or overlay. A public template must contain placeholders or clearly labeled synthetic examples rather than private research or invented completed evidence. Short descriptions should expose a self-contained trigger in the discovery window; preserve detailed trigger coverage in the skill body.
+
 ## Owner-authorized incremental publication
 
 The repository owner may explicitly authorize direct commits and normal fast-forward pushes to `main` for reviewed incremental references and minimal routing or maintenance changes; a PR is not required under that authorization. Without it, use the agreed review workflow. Major changes to core methodological rules require substantive review. Never force-push, weaken branch protections, change licensing, or silently resolve substantive conflicts.

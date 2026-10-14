@@ -1,9 +1,15 @@
 ---
 name: econ-research-design
-description: Use for conversationally choosing, framing, refining, positioning, or stress-testing economics research topics before writing, including reduced-form, theoretical, structural, measurement, policy, and preference-elicitation work. Trigger for vague topics, datasets, policies, literature-gap ideas, stalled projects, DCE/conjoint analysis, BWS, WTP/WTA, TTO, standard gamble, patient preferences, or health-state valuation. Prioritize current uploads, then Zotero, then verified online sources.
+description: Use when designing or refining economics research.
 ---
 
 # Econ Research Design
+
+## Task triggers
+
+Use for conversationally choosing, framing, refining, positioning, or stress-testing economics research topics before writing, including reduced-form, theoretical, structural, measurement, policy, and preference-elicitation work. Trigger for vague topics, datasets, policies, literature-gap ideas, stalled projects, DCE/conjoint analysis, BWS, WTP/WTA, TTO, standard gamble, patient preferences, or health-state valuation. Prioritize current uploads, then Zotero, then verified online sources.
+
+For learning from supplied articles, books or chapters, pair this skill's substantive judgment with the incremental distillation protocol under `econ-project-workflow`. Preserve source and chapter scope, distinguish author claims from proposed generalizations, and merge supported knowledge into existing topical references. Do not turn reading into unsolicited agenda changes.
 
 ## Purpose
 

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "purpose": "Manual reasoning regression cases, not executed model evaluations or empirical evidence.",
+  "cases": [
+    {
+      "id": "book-partial-coverage",
+      "prompt": "I uploaded Chapter 3 of a methods book. Read and distill it into our knowledge. Other chapters are unavailable; some equations are scanned images.",
+      "expected": ["Register edition/chapter and actual scope", "Read available text and inspect legible load-bearing images or mark missing", "Do not claim complete-book coverage", "Merge supported knowledge into existing subject references"],
+      "failures": ["Claims entire book read", "Reconstructs unread equations and attributes them to the book", "Publishes chapter text"],
+      "routes": ["econ-project-workflow/references/knowledge-distillation.md"]
+    },
+    {
+      "id": "unavailable-primary",
+      "prompt": "A tutorial claims an estimator works with any dependent panel. The original paper cannot be retrieved. Can this become a universal skill rule?",
+      "expected": ["Separate tutorial claim from checked support", "Record the primary access gap", "Keep the broad guarantee pending and seek bounded author/docs support", "Still extract other genuinely supported useful lessons"],
+      "failures": ["Invents assumptions or original proof", "Promotes universal guarantee from title or tutorial alone", "Refuses all learning solely because one source is blocked"],
+      "routes": ["econ-project-workflow/references/knowledge-distillation.md", "causal-inference/references/dml-panel-audit.md"]
+    },
+    {
+      "id": "exploratory-heterogeneity",
+      "prompt": "I explored many subgroup and outcome definitions and found a promising stable pattern. Help develop hypotheses and the story, and retain useful workflow lessons.",
+      "expected": ["Supports transparent exploration and post hoc hypothesis generation", "Records consequential samples/specifications and selection", "Offers rival mechanisms and useful next checks without choosing the agenda", "Does not label selected nominal p-values as confirmatory automatically"],
+      "failures": ["Requires preregistration before exploratory work", "Hides screening or invents estimates", "Repeats moral lectures instead of helping analyze"],
+      "routes": ["econ-research-design/SKILL.md", "causal-inference/references/applied-estimand-inference.md"]
+    },
+    {
+      "id": "pretrend-nonrejection",
+      "prompt": "After binning early pretreatment periods, the event-study pretrend test no longer rejects. What can I learn and save as a reusable lesson?",
+      "expected": ["Distinguishes binning, deletion and window restriction", "Explains changed test/estimand/support and power", "Supports examining the specification with full record", "Does not equate nonrejection with repaired identification"],
+      "failures": ["Certifies parallel trends solely from the p-value", "Labels every binning choice invalid without design reasoning"],
+      "routes": ["causal-inference/references/did-target-sensitivity.md"]
+    },
+    {
+      "id": "solver-success",
+      "prompt": "The optimizer converged and the model matches target moments. Can I report the parameters as identified and the welfare counterfactual as validated?",
+      "expected": ["Separates optimizer termination, feasibility/residuals, identification and fit", "Requests parameter-moment/exclusion justification and untargeted checks", "States counterfactual closure and welfare assumptions", "Does not fabricate numerical diagnostics"],
+      "failures": ["Treats optimizer success as identification", "Counts estimation targets as independent validation"],
+      "routes": ["econ-structural-research/SKILL.md"]
+    },
+    {
+      "id": "version-conflict",
+      "prompt": "A tutorial uses an option absent from the current help page, and an older implementation differs from the paper. Distill this into our skills.",
+      "expected": ["Records software/paper version and consulted scope", "Labels interface or algorithm mismatch without asserting execution failure", "Locks the implementation before a numerical comparison", "Keeps unresolved historical behavior pending"],
+      "failures": ["Calls the command broken without execution or version evidence", "Writes current defaults as timeless rules"],
+      "routes": ["econ-project-workflow/references/knowledge-distillation.md", "econ-research-design/references/text-measurement-inference.md"]
+    },
+    {
+      "id": "contradictory-new-source",
+      "prompt": "A newly read chapter contradicts a rule in our skill reference. Update the knowledge rather than append another summary.",
+      "expected": ["Checks whether objects/assumptions/versions are comparable", "Records both supports and contradictions", "Narrows/replaces the old wording or marks needs_recheck", "Uses stable lesson IDs and retains replacement history"],
+      "failures": ["Keeps incompatible universal rules simultaneously active", "Silently overwrites prior evidence", "Accepts newer automatically as correct"],
+      "routes": ["econ-project-workflow/references/knowledge-distillation.md"]
+    },
+    {
+      "id": "private-source-public-skill",
+      "prompt": "Learn from this unpublished chapter and my project notes. Our generic skills are public; do not expose private research or personal annotations.",
+      "expected": ["Preserves private source/task records outside public bundles", "Generalizes only allowed reusable lessons", "Separates local overlay from public baseline", "Verifies authorized publication remotely without uploading full source"],
+      "failures": ["Publishes source bodies or private identifiers", "Uploads entire profile or local customized skill", "Changes credentials or raw data"],
+      "routes": ["econ-project-workflow/references/research-article-intake.md", "CONTRIBUTING.md"]
+    }
+  ]
+}

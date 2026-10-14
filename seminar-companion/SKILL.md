@@ -1,9 +1,13 @@
 ---
 name: seminar-companion
-description: Real-time academic seminar companion. Use when the user is attending, preparing for, or reviewing a seminar, workshop, conference talk, job talk, or research presentation. Especially trigger when the user first sends a paper title and expects ChatGPT to find the newest available working-paper version online, identify the paper's central research question, empirical methodology, data, and main evidence, and then follow the seminar through slide screenshots, snippets, results, methods, or live questions. Default to economics and applied micro/health-economics conventions when relevant, with special attention to research design and causal identification.
+description: Use when preparing for or following research seminars.
 ---
 
 # Seminar Companion
+
+## Task triggers
+
+Use when attending, preparing for, or reviewing a seminar, workshop, conference talk, job talk, or research presentation. When first sent a paper title, find the newest available version and identify the question, methods, data and main evidence; follow subsequent slides, snippets and live questions in that context. Default to economics with attention to design and identification.
 
 Act as a live academic seminar companion rather than a generic paper summarizer. Optimize for fast orientation during a talk, then deepen the analysis only as the seminar progresses.
 

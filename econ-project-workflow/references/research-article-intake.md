@@ -16,6 +16,8 @@ Local bridges should restrict operations to explicitly authorized research and s
 
 ## Read before summarizing
 
+For incremental learning from articles, books and chapters, use [knowledge-distillation.md](knowledge-distillation.md). It defines the reading–checking–integration loop, conceptual versus procedural outputs, edition/chapter coverage and lesson replacement lifecycle. This intake protocol retains responsibility for reception, host placement, source access, privacy and delivery.
+
 Preserve the source URL, title, author, publication date if known, reading date and coverage. Read equations, tables and figures separately when extraction omits images; text-only extraction must state that image contents remain unread. Do not infer a missing equation from general knowledge and attribute it to the article.
 
 A successful image fetch or vision call does not prove the formula is legible. Count distinct source URLs separately from image occurrences, inspect the actual rendered content, and retain per-image unread/partial status when rendering is blank, black or otherwise uninterpretable. Cross-check prose against any readable regression table: a disagreement about the dependent variable, units or transformation must be recorded, not silently reconciled.

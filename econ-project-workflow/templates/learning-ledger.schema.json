@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private learning ledger, version 1",
+  "description": "Documentary structural schema for local, user-maintained declarations. Not source truth, copyright clearance, publication permission, or an extraction/execution system.",
+  "$comment": "The stdlib validate_learning_ledger.py is authoritative for ID uniqueness/references, supersession cycles and active predecessor conflicts, declared read body support, metadata-only locators, obvious selected-book/complete contradictions, completed checks with an exactly matching evidence scope, and optional root/symlink containment. These relational rules are not all expressible here. No JSON Schema runtime dependency is required.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "sources", "lessons"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "lessons": {"type": "array", "items": {"$ref": "#/$defs/lesson"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "strings": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "images", "scope"],
+      "properties": {
+        "text": {"enum": ["unread", "partial", "complete"]},
+        "images": {"enum": ["unread", "partial", "complete", "not_applicable"]},
+        "scope": {"$ref": "#/$defs/text", "description": "State the actual extent read, not title metadata. Selected chapters do not imply complete parent-book reading."}
+      }
+    },
+    "check": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "locator", "scope", "status", "version"],
+      "properties": {
+        "kind": {"enum": ["primary_source", "documentation", "calculation", "code_execution"]},
+        "locator": {"$ref": "#/$defs/text"},
+        "scope": {"$ref": "#/$defs/text", "description": "For a lesson upgrade, reuse its supporting evidence scope verbatim; no inferred scope matching."},
+        "status": {"enum": ["not_attempted", "partial", "complete", "blocked"]},
+        "version": {"$ref": "#/$defs/text"}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_id", "source_type", "title", "version", "read_at", "coverage"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/text"},
+        "source_type": {"enum": ["article", "book", "chapter", "paper", "documentation", "lecture"]},
+        "title": {"$ref": "#/$defs/text"},
+        "version": {"$ref": "#/$defs/text"},
+        "read_at": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "ISO calendar date. An unread coverage declaration is not turned into reading by this date."},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "url": {"$ref": "#/$defs/text", "description": "Opaque metadata, never fetched; /home/ in a URL is not a private filesystem path."},
+        "authors": {"$ref": "#/$defs/strings"},
+        "edition": {"$ref": "#/$defs/text"},
+        "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}}
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_id", "locator", "scope", "relation"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/text"},
+        "locator": {"$ref": "#/$defs/text", "description": "Body locator (page, section, equation, figure, etc.), not merely a title, author, DOI, or URL."},
+        "scope": {"$ref": "#/$defs/text"},
+        "relation": {"enum": ["supports", "contradicts", "context"]}
+      }
+    },
+    "validation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["level", "record"],
+      "properties": {
+        "level": {"enum": ["reading_only", "primary_checked", "numerically_checked", "executed"], "description": "Not a cumulative ladder: primary_checked needs primary_source or documentation; numerically_checked needs calculation; executed needs code_execution. Each needs a completed check on declared read supporting evidence of exactly matching scope."},
+        "record": {"$ref": "#/$defs/text"},
+        "code_version": {"$ref": "#/$defs/text"},
+        "software_version": {"$ref": "#/$defs/text"}
+      },
+      "allOf": [{"if": {"properties": {"level": {"const": "executed"}}, "required": ["level"]}, "then": {"required": ["code_version", "software_version"]}}]
+    },
+    "target": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/(?:SKILL\\.md|(?:references|scripts|templates)/(?!\\.{1,2}(?:/|$))[A-Za-z0-9_.-]+(?:/(?!\\.{1,2}(?:/|$))[A-Za-z0-9_.-]+)*)$"}
+      ],
+      "description": "Safe repository-relative skill entrypoint/reference/script/template file. No absolute paths, traversal, backslashes, commands, or URLs. Optional --root checks existence and symlink containment."
+    },
+    "lesson": {
+      "type": "object", "additionalProperties": false,
+      "required": ["lesson_id", "statement", "status", "source_ids", "evidence", "assumptions", "limitations", "target", "supersedes", "validation", "conflict_note"],
+      "properties": {
+        "lesson_id": {"$ref": "#/$defs/text"},
+        "statement": {"$ref": "#/$defs/text"},
+        "status": {"enum": ["candidate", "integrated", "needs_recheck", "superseded", "rejected"]},
+        "source_ids": {"$ref": "#/$defs/strings", "uniqueItems": true},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+        "assumptions": {"$ref": "#/$defs/strings"},
+        "limitations": {"$ref": "#/$defs/strings"},
+        "target": {"$ref": "#/$defs/target"},
+        "supersedes": {"$ref": "#/$defs/strings", "uniqueItems": true},
+        "validation": {"$ref": "#/$defs/validation"},
+        "conflict_note": {"type": "string", "description": "May be empty unless integrated replacement or contradicting evidence requires a resolution note. Integrated predecessors being replaced must be marked superseded."}
+      },
+      "allOf": [{"if": {"properties": {"status": {"const": "integrated"}}, "required": ["status"]}, "then": {"properties": {"target": {"type": "string"}}}}]
+    }
+  }
+}

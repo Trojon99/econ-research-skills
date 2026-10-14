@@ -1,9 +1,19 @@
 ---
 name: econ-project-workflow
-description: "Economics research project workflow across Stata, Python, R, Julia, and mixed-language projects. Use when ChatGPT creates, edits, organizes, debugs, optimizes, refactors, or audits an economics research repository or analysis pipeline; designs project folders, project entrypoints, data lifecycle, intermediate files, logs, caching, reproducibility, validation, figures/tables, or cross-language handoffs; or reviews code where workflow architecture matters. Preserve the standard project layout code, data/original, data/work, data/temp, data/output, doc, and log unless the user specifies otherwise. Load language-specific backend guidance when available; detailed Stata conventions live in references/stata.md."
+description: Use when building reproducible economics workflows.
 ---
 
 # Economics Project Workflow
+
+## Task triggers
+
+Economics research project workflow across Stata, Python, R, Julia, and mixed-language projects. Use when creating, editing, organizing, debugging, optimizing, refactoring or auditing a research pipeline, its data lifecycle, entrypoints, logs, validation or outputs. Preserve existing project conventions. Use this skill also when articles, books or chapters should become source-grounded knowledge, topic references and reusable procedures.
+
+## Learning and distillation
+
+For forwarded research material or explicit learning requests, read `references/knowledge-distillation.md` and `references/research-article-intake.md`. Work in coherent reading–checking–integration cycles, use the private ledger template and record actual text/image/chapter coverage. Route conceptual or methodological lessons to their natural existing parent. Keep candidates and contradictions visible; do not claim execution or complete-book reading from partial material. A requested knowledge base uses its established subject notes; do not implicitly write to a vault or publish private material.
+
+The portable learning bundle includes `templates/learning-ledger.json`, `templates/learning-ledger.schema.json`, `templates/topic-knowledge-note.md` and `scripts/validate_learning_ledger.py`. Load these explicitly when registering or checking a new learning task; the checker is read-only and does not validate source truth or publish artifacts.
 
 Treat the research project as a reproducible system rather than a collection of scripts. Keep the project architecture stable across programming languages while allowing the implementation backend to change.
 
