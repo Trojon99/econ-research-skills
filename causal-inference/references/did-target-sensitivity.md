@@ -35,3 +35,11 @@ IV-WAOSS还需工具排除限制、第一阶段/约化式条件趋势、单调�
 先选目标l' tau_post和合适的事件研究估计器。RM约束后期相邻偏误变化相对前期最大相邻变化；SD约束离散二阶差分，M=0仍允许非零线性差异趋势，不等于PT。记录结果单位、时间间隔、网格、目标和协方差；网格给的是结论破坏区间，不是偏误真值。保证依赖限制集合和推断条件，不是任意有限样本95%。
 
 `pre/post` 为系数位置；`omit` 按遗漏标记处理，不是删除所有数值零；自定义b/V须显式传入并对齐排序。平均后期效应不等于默认首期目标。不能用趋势敏感性模块修复异质性污染的TWFE参数。来源：[连享会1467](https://www.lianxh.cn/details/1467.html)；[Rambachan–Roth发表版](https://www.jonathandroth.com/assets/files/HonestParallelTrends_Main.pdf) §§2.1–2.4；[作者Stata README](https://github.com/mcaceresb/stata-honestdid) RM/SD/average/staggered。未运行例子或验证本机插件。
+
+## 6. 水平与对数异号：分布、方向与支持一起审
+
+饱和四格log-OLS差的是E[logY]，exp(beta)是几何均值之比的比，不普遍是算术均值增长比；重变换因子须有额外抵消条件。共同正值样本/零负值删除、窗口和群体构成另列，两个尺度各有反事实限制，不能以某尺度pretrend不拒绝决定真实DGP。
+
+[连享会1340](https://www.lianxh.cn/details/1340.html)与[McConnell v1](https://arxiv.org/html/2308.00167v1) §2/命题1的绝对值反号条件缺方向限制。独立标准库反例：四格确定正值10、20、20、29满足该绝对值不等式，但levels=-1且log DID=-0.3215836241，同为负。对算术四格比例比，正分母下需方向条件alpha4*(alpha1*alpha4-alpha2*alpha3)<0；真正E[logY]还依组内分布。反例不是作者代码运行或实证复现。
+
+迁移DID实现先对齐单位/时间、缺失/单例、权重、自由度、对照及各horizon支持。DID2S第一阶段仅未处理，生成误差需进入正确两阶段推断；软件相同公式不证明同一estimand。来源：[1895](https://www.lianxh.cn/details/1895.html)；[PyFixest官方](https://pyfixest.org/tutorials/difference-in-differences.html)指定段、[Butts–Gardner](https://journal.r-project.org/articles/RJ-2022-048/)方法/聚合段。教程watermark/发布版不同，精确LP-DID API未恢复，未执行。

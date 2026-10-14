@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.6] - 2026-10-14
+
+### Added
+- Integrated 36 additional tutorial-text reading records and selected source checks into five topical references: panel/dynamic DML, mediation, AI measurement, bounded/quantile outcomes, and common-factor panels.
+- Extended existing DID and applied-estimand guidance for outcome scales, treatment versions, generated event outcomes and transparent heterogeneity exploration.
+
+### Boundaries
+- Retained partial-source, image, version and software-execution limits; no full proof audit, model training or research-code replication is claimed. Public entrypoints use the maintained public baseline, not private overlays.
+- Aligned VERSION/README at 0.4.6; no licensing changes.
+
 ## [0.4.5] - 2026-10-14
 
 - Clarify per-image reading coverage and cross-check article prose against visible regression outputs.

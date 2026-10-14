@@ -31,3 +31,7 @@ OLS不要求X/Y无条件正态。区分E(logY|X)与logE(Y|X)，不要把任何�
 模型分类不是可信度排名。把观测量、参数/载荷、不可观测对象、行为、清算/规范化、政策变化与福利连起来；以需要开放的选择和反馈决定复杂度。识别、给定参数反演、校准、基准求解与反事实验证分开。资源范围和工具包不等于论文全复现。
 
 来源：[1960](https://www.lianxh.cn/details/1960.html)、[1968](https://www.lianxh.cn/details/1968.html)；[Low–Meghir](https://doi.org/10.1257/jep.31.2.33)相关片段；[Redding–Rossi-Hansberg](https://www.princeton.edu/~reddings/pubpapers/ARQSM-2017.pdf)引言/§2.7.4；[AB2022 README](https://github.com/Ahlfeldt/AB2022-toolkit)、[MRRH2018 README](https://github.com/Ahlfeldt/MRRH2018-toolkit)。未运行Stata/MATLAB，未通读全部模型证明。实际onboarding见结构技能evidence-to-equilibrium参考。
+
+## 文本预测进入推断的专门审计
+
+当代理来自LLM标注/embedding，加载 `text-measurement-inference.md`，分别审计构念、参照标注程序、校正抽样、目标score、训练泄漏和平台漂移。高一致率不替代上述环节；阅读/静态软件核对不等于已执行。原有测量、选择与尺度规则保持。

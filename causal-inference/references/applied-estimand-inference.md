@@ -40,3 +40,11 @@
 ## Further audits by method
 
 For DID target/scale/trend sensitivity see `did-target-sensitivity.md`; for IV assignment/strength see `iv-identification-audit.md`; for RD support/output semantics see `rd-running-variable-audit.md`; for donor support and interval targets see `synthetic-control-audit.md`. Existing applied lessons and local project supplements remain unchanged.
+
+## 组间反应、处理版本与事件反应的不同目标
+
+高组显著低组不显著不等于差异显著；比较大小及含协方差的组间差。异质性图可生成事后机制，但同一组别可符合多种解释，处理后分组还可能条件化中介/选择。允许广泛分组/窗口/尺度探索；保留切点、样本、失败与零结果，适用时按实际搜索族做联合推断或独立验证；cross-fitting不自动修正筛组。来源：[1555](https://www.lianxh.cn/details/1555.html)、[1556](https://www.lianxh.cn/details/1556.html)为教学评论，以上是独立方法判断，不冒充对应主论文证明。
+
+区分随机获得机会A与实际接受版本T；A随机不使T随机。版本反应与版本分配成分需要各自潜在结果/可忽略性和支持，不能从分解名称识别歧视或福利最优分配。来源：[1684](https://www.lianxh.cn/details/1684.html)；[Heiler–Knaus v1](https://arxiv.org/html/2507.01517v1) §§4–6、[作者notebook](https://mcknaus.github.io/assets/code/RNB_HK2_decomposition.nb.html) S.1–S.2。本轮另回读notebook：女性d1=-35.381946是组别均值分解成分，不是培训处理差；女性真正DiM=12.295069，男性DiM=19.909288。不能据前者称女性培训负效应。notebook当前版本与v1可能不同，未运行作者代码/审全证明。
+
+把估计事件反应作为第二步outcome时，第一步是带噪声测量非真实ITE。事件总体稳定要个体潜在时点限制或另一路径，分布不变/不拒绝不证明个体不变。full-horizon限制改变总体；第二步政策识别、生成误差与簇级推断另审。来源：[1708](https://www.lianxh.cn/details/1708.html)；[作者指定v2](https://arxiv.org/html/2403.19563v2) §§2–4/B.3/A.1、[unitdid作者文档](https://kazuyanagimoto.com/unitdid/)。原页面题名和抽取服务新版摘要冲突，采用指定版不混引，未审所有附录或复现。

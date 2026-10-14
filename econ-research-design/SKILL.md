@@ -187,3 +187,7 @@ Label unsupported elements as provisional. Do not make the requested document so
 ## Applied audit routing
 
 - `references/measurement-sensitivity-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+
+## Targeted learning and outcome audits
+
+- `references/text-measurement-inference.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.

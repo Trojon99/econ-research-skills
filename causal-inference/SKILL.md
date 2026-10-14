@@ -185,3 +185,9 @@ Load `references/applied-estimand-inference.md` on demand for applied estimands,
 - `references/iv-identification-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
 - `references/rd-running-variable-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
 - `references/synthetic-control-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+
+## Targeted learning and outcome audits
+
+- `references/dml-panel-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
+- `references/mediation-estimands-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
+- `references/common-factor-panel-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.

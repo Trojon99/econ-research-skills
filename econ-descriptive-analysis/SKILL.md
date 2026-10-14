@@ -155,3 +155,7 @@ If the user explicitly says to prefer figures over tables, make figures the domi
 ## Optional applied reference
 
 Load `references/nonlinear-binned-functions.md` on demand for nonlinear binned functions, controls and inference boundaries. This reference distinguishes tutorial reading, primary-source checks and unexecuted software; it does not establish numerical validation.
+
+## Targeted learning and outcome audits
+
+- `references/bounded-quantile-outcomes.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.

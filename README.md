@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.5`
+**Current version:** `v0.4.6`
 
 **Maintenance status:** Actively maintained
 
@@ -112,6 +112,9 @@ For forwarded research articles, the [article-intake protocol](econ-project-work
 
 
 Applied audit coverage also includes [DID targets and trend sensitivity](causal-inference/references/did-target-sensitivity.md), [IV identification](causal-inference/references/iv-identification-audit.md), [RD running-variable support](causal-inference/references/rd-running-variable-audit.md), [synthetic controls](causal-inference/references/synthetic-control-audit.md), [sample/transform auditing](econ-project-workflow/references/sample-transform-audit.md), and [measurement/sensitivity design](econ-research-design/references/measurement-sensitivity-audit.md). Transparent exploratory analysis remains supported; tutorial reading and documentation checks are not code execution or comprehensive method certification.
+
+
+Targeted references additionally cover [panel/dynamic DML](causal-inference/references/dml-panel-audit.md), [mediation estimands](causal-inference/references/mediation-estimands-audit.md), [AI text measurement](econ-research-design/references/text-measurement-inference.md), [bounded and quantile outcomes](econ-descriptive-analysis/references/bounded-quantile-outcomes.md), and [common-factor panel inference](causal-inference/references/common-factor-panel-audit.md). Existing DID and applied-estimand references integrate outcome-scale and treatment-version lessons without replacing local project supplements.
 
 ## Research principles
 
