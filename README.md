@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.2`
+**Current version:** `v0.4.3`
 
 **Maintenance status:** Actively maintained
 
@@ -107,6 +107,8 @@ Optional, provisional full-text-grounded lessons are available for [sensitive-ou
 ## Applied-method references
 
 Bounded applied lessons are available for [estimands and inference](causal-inference/references/applied-estimand-inference.md), [nonlinear binned functions](econ-descriptive-analysis/references/nonlinear-binned-functions.md), and [evidence to equilibrium](econ-structural-research/references/evidence-to-equilibrium.md). These distinguish complete tutorial reading from selected primary-source checks; software execution and full proof audits are not claimed.
+
+For forwarded research articles, the [article-intake protocol](econ-project-workflow/references/research-article-intake.md) separates genuine reading, canonical knowledge-base filing, evidence-gated skill promotion, and privacy-preserving GitHub maintenance.
 
 ## Research principles
 

@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.3] - 2026-10-14
+
+### Added
+- Added the article-intake protocol under project workflow: source-coverage checks, canonical topic-note consolidation, evidence-gated skill promotion, and local/remote execution boundaries.
+- Clarified local deployment versus authorized GitHub maintenance, privacy whitelisting, optimistic-concurrency writes, and end-to-end receipts.
+
+### Boundaries
+- No new methodological conclusions, full article bodies, private knowledge-base content, machine-specific paths or licensing changes were published.
+- Aligned VERSION and README at 0.4.3. Packaging checks do not establish that any specific deployment or article has passed end-to-end verification.
+
 ## [0.4.2] - 2026-10-14
 
 ### Added

@@ -169,6 +169,10 @@ Default project contract:
 
 When the user asks for a figure/result review HTML, read `references/figure-review-html-benchmark.md` and use `assets/figure-review-template.html`. The report should evaluate the empirical role and interpretation boundary of each figure, not merely display an image gallery.
 
+## Research article intake
+
+When forwarded articles need reading, critical synthesis, knowledge-base filing or promotion into reusable skills, read [the article-intake protocol](references/research-article-intake.md). Verify reception, source coverage, execution placement, canonical storage and any authorized GitHub publication separately. Prefer existing subject notes and natural parent skill references; preserve private local overlays.
+
 ## Work with the other economics skills
 
 Keep workflow implementation separate from methodological judgment:
