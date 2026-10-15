@@ -35,3 +35,16 @@ OLS不要求X/Y无条件正态。区分E(logY|X)与logE(Y|X)，不要把任何�
 ## 文本预测进入推断的专门审计
 
 当代理来自LLM标注/embedding，加载 `text-measurement-inference.md`，分别审计构念、参照标注程序、校正抽样、目标score、训练泄漏和平台漂移。高一致率不替代上述环节；阅读/静态软件核对不等于已执行。原有测量、选择与尺度规则保持。
+
+## 预测信息集、校准和政策对象
+
+冻结index时点、实际可取得的特征、标签horizon与随访支持；claims诊断可能反映就医/记录而非潜在健康。事后回填支出可用于事后描述，不能进入事前风险特征。调参、ensemble权重、校准和最终测试分离；病例平衡后的概率不自动是原人群风险，理论基准率还原与经验校准须分别说明。未核完整抽样定义时不移植修正公式或超参数。
+
+Einav等2018主文及附录A/B区分同一基线向前支出与死亡后回填口径；事后死亡者支出高不证明事前已知必死者的浪费。现行照护下的死亡预测不是不给治疗的死亡风险；AUC与风险分布不识别任何具体治疗的成本、生存、生活质量或最优政策。内部随机留出不叫外部验证，外部校准候选另留待核。这里只整合信息集/内部校准与政策对象边界，未执行预测或读取研究数据。
+
+### 原源与阅读边界
+
+- [Supplementary Materials for Predictive modeling of U.S. health care spending in late life](https://web.stanford.edu/~leinav/pubs/Science2018_Appendix.pdf)：PDF pp2–9 §§A.1–A.2,B.1–B.6。版本/范围：2018-06-29作者公开附录；同一研究子材料，不计独立研究；仅相关段落/静态文档核查，非全证明或软件运行。
+- [Predictive modeling of US healthcare spending in late life](https://pmc.ncbi.nlm.nih.gov/articles/PMC6038121/)：Main Text: baseline predictors, spending definitions, final paragraph lines87–117。版本/范围：Science2018-06-29,360(6396):1462–1465,DOI10.1126/science.aar5045；PMC作者稿；仅相关段落/静态文档核查，非全证明或软件运行。
+
+二手阅读背景：[1403](https://www.lianxh.cn/details/1403.html)、[1324](https://www.lianxh.cn/details/1324.html)、[633](https://www.lianxh.cn/details/633.html)、[482](https://www.lianxh.cn/details/482.html)、[508](https://www.lianxh.cn/details/508.html)、[399](https://www.lianxh.cn/details/399.html)、[53](https://www.lianxh.cn/details/53.html)、[1541](https://www.lianxh.cn/details/1541.html)。这些是相应组文字正文阅读记录；不是所有图片已读。相关组图像未完整查看；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。

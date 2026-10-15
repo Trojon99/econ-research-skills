@@ -31,3 +31,15 @@
 来源：[连享会1960](https://www.lianxh.cn/details/1960.html)、[1968](https://www.lianxh.cn/details/1968.html)完整文字阅读记录；[Low–Meghir](https://doi.org/10.1257/jep.31.2.33) separability/validation相关片段；[Redding–Rossi-Hansberg](https://www.princeton.edu/~reddings/pubpapers/ARQSM-2017.pdf)引言与§2.7.4；[SciPy root官方说明](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html) Returns/examples。success只表示算法成功退出，不能代替经济方程残差与可行性验收。
 
 [AB2022](https://github.com/Ahlfeldt/AB2022-toolkit)及[MRRH2018](https://github.com/Ahlfeldt/MRRH2018-toolkit)仅README定向阅读，后者明确教学变体不对应论文实质分析。工具包范围、平台/依赖和修改文件先审，未运行Stata/MATLAB，不以教学包或时间安排宣称全论文复现/模型掌握。
+
+## 配置成本、支持规模和净福利的三层映射
+
+等价财政支持不等于预算直接支出、净资源毁损或GE福利。现金/税收/信贷/土地各有观测与反事实基准；上市企业支持率外推和近邻地价比较保留选择、用途及开发条件限制。TFPR差异的楔子解释依赖技术、需求、竞争与计量基准，不把TFPR当物理技术排名。
+
+IMF WP/25/155所读§2、§3将财政度量与政策计数—错配相关分析分开，原文明确后者不是因果估计。把条件残差方差映射到聚合TFP及资本调整后的GDP，需要该模型参数与闭合；不能混成同一个已识别中介链。财政规模加总与配置反事实有不同均衡处理，不笼统说全部PE或全面GE净福利。知识外溢、学习、融资、转移接受者与过渡成本未同账计量时，仅报告特定配置渠道，不冒充政策最优性。未复现原数据/量化值。
+
+### 原源与阅读边界
+
+- [Industrial Policy in China: Quantification and Impact on Misallocation](https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025155-source-pdf.pdf)：§2 pp9—12 land/Total Size/caveats；p4潜在收益遗漏；§3 pp12—14模型、式1—2及associations声明；p19 Aggregate TFP Impact。版本/范围：IMF WP/25/155, August2025；PDF注明作者列表08/15/2025更新；仅相关段落/静态文档核查，非全证明或软件运行。
+
+二手阅读背景：[1848](https://www.lianxh.cn/details/1848.html)、[900](https://www.lianxh.cn/details/900.html)、[331](https://www.lianxh.cn/details/331.html)、[13](https://www.lianxh.cn/details/13.html)、[1545](https://www.lianxh.cn/details/1545.html)、[1465](https://www.lianxh.cn/details/1465.html)、[1389](https://www.lianxh.cn/details/1389.html)、[791](https://www.lianxh.cn/details/791.html)。这些是相应组文字正文阅读记录；不是所有图片已读。生产组记录9幅实质图已查看，其余相关组图像大多未读；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。

@@ -1,10 +1,10 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.7`
+**Current version:** `v0.4.8`
 
 **Maintenance status:** Actively maintained
 
-**Last updated:** 2026-10-14
+**Last updated:** 2026-10-15
 
 **Source of truth:** GitHub `main`
 
@@ -131,6 +131,9 @@ python3 econ-project-workflow/scripts/validate_learning_ledger.py /authorized/ta
 Replace the illustrative path with the actual authorized task file. Add `--root /authorized/repository` to check promotion targets against the selected checkout. This read-only helper validates declarations, identifiers, cross-references and target containment; it does not read sources, execute tutorial code or prove a claim true. Keep real task ledgers outside public Git.
 
 [Behavior cases](evaluations/README.md) test reasoning only when actually run and reviewed. The GitHub workflow runs packaging and ledger integrity checks, not research ingestion, external LLM calls or scientific certification.
+
+
+Further model and implementation coverage includes [spatial-equilibrium-implementation](econ-structural-research/references/spatial-equilibrium-implementation.md), [dsge-solver-audit](econ-structural-research/references/dsge-solver-audit.md), [production-function-identification](econ-structural-research/references/production-function-identification.md), [frontier-efficiency-audit](econ-structural-research/references/frontier-efficiency-audit.md), [discrete-choice-identification](econ-structural-research/references/discrete-choice-identification.md), [dynamic-panel-moments](causal-inference/references/dynamic-panel-moments.md), [matching-weighting-audit](causal-inference/references/matching-weighting-audit.md), [survival-riskset-audit](causal-inference/references/survival-riskset-audit.md). Lessons are integrated by topic, with unresolved claims retained outside the public bundle; primary-source checks are scoped and source software has not been executed.
 
 ## Research principles
 

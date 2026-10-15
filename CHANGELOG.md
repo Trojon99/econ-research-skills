@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.8] - 2026-10-15
+
+### Added
+- Eight topical references on spatial equilibrium, DSGE solvers, production-function identification, frontier efficiency, discrete choice, dynamic-panel moments, matching/weighting, and survival risk sets.
+- Extended equilibrium evidence, matrix-completion and prediction/measurement guidance, preserving existing entrypoints and local deployment overlays.
+
+### Boundaries
+- Synthesis follows 48 additional tutorial-text reading records and scoped source checks; not a claim of complete image coverage, whole-paper proof review or source-software replication.
+- Unresolved versions, image/formula gaps and unsupported candidates are not promoted to universal rules. No raw ledgers, reading reports, source bodies or private project material are published.
+
 ## [0.4.7] - 2026-10-14
 
 ### Added

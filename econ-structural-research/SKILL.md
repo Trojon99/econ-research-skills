@@ -93,3 +93,11 @@ Load `references/evidence-to-equilibrium.md` on demand for reduced-form evidence
 ## Model onboarding
 
 For a minimal data-to-model onboarding map, toolkit scope and closure choices, also load `references/evidence-to-equilibrium.md`. Do not equate inversion, parameter identification and successful solver termination.
+
+## Topic-specific model and panel references
+
+- `references/spatial-equilibrium-implementation.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/dsge-solver-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/production-function-identification.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/frontier-efficiency-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/discrete-choice-identification.md`: load for this topic; retain its model, reading-scope and implementation boundaries.

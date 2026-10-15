@@ -195,3 +195,9 @@ Load `references/applied-estimand-inference.md` on demand for applied estimands,
 - `references/dml-panel-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
 - `references/mediation-estimands-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
 - `references/common-factor-panel-audit.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
+
+## Topic-specific model and panel references
+
+- `references/dynamic-panel-moments.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/matching-weighting-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+- `references/survival-riskset-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
