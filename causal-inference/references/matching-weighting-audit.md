@@ -36,3 +36,16 @@ psmatch2默认ATT、ATE显式；_weight在ties/k-NN和kernel有不同归一语�
 - [Double-robust treatment effects](https://www.stata.com/stata-news/news29-1/double-robust-treatment-effects/)：正文conditional independence与AIPW/IPWRA explanations lines986–1003,1093–1108。版本/范围：Stata News29(1) official exposition；仅相关段落/静态文档核查，非全证明或软件运行。
 
 二手阅读背景：[1693](https://www.lianxh.cn/details/1693.html)、[1279](https://www.lianxh.cn/details/1279.html)、[1661](https://www.lianxh.cn/details/1661.html)、[1128](https://www.lianxh.cn/details/1128.html)、[385](https://www.lianxh.cn/details/385.html)、[370](https://www.lianxh.cn/details/370.html)、[178](https://www.lianxh.cn/details/178.html)、[145](https://www.lianxh.cn/details/145.html)。这些是相应组文字正文阅读记录；不是所有图片已读。相关组图像未完整查看；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。
+
+
+## 标准化与实际权重的基础账
+
+令m_d(x)=E[Y|D=d,X=x]。ATE对目标总体积分m1−m0，需两潜在结果的相应条件均值可交换及双侧支持；ATT只需恢复treated的Y(0)，故所需对照支持以treated分布为准。总体positivity、有限样本空cell及估计PS近无重叠不同；真e(X)的balancing性质不保证估计得分的有限样本平衡或隐藏混杂消失。
+
+分层估计Σ_k q_k(Ȳ1k−Ȳ0k)，q取总体/treated/control的strata份额分别对应ATE/ATT/ATU目标；标签不改变权重。IPW的D/e、(1−D)/(1−e)是ATE型；ATT用treated均值减control odds e/(1−e)加权均值。HT与两臂各自归一的Hájek不是有限样本同一估计器。trim须重算保留集合的归一量、说明改变的目标和支持，不固定一个经验区间为通用最优。
+
+有放回M近邻ATT中，treated各权重1/N_T，control j按复用次数K_j负载−K_j/(M N_T)；ties/变动M须按实际映射重构，不能将共享donor的pair差当独立。bias correction拟合相应反事实臂的响应面，不由全样本任意Y~X回归自动给出μ0；AIPW的特定增广性质与任意matching加回归不同，其推断须含nuisance步骤而非最后一步朴素SE。
+
+固定M近邻的普通n-out-of-n bootstrap不能默认有效；这不是一切PS估计/加权方法的禁令。Lin–Han所读arXiv v2的发散M结果另有IID、strong overlap、密度/支持几何及M速率限制；bias-corrected推断还需其光滑和估计率条件。不能将固定5邻居换个bootstrap标签就套用，也不直接推广到ATT、簇相关或任意估计PS。
+
+来源：Cunningham[第一版第5章](https://mixtape-1ed.netlify.app/05-matching_and_subclassification) §§5.1–5.3，2026-10-15快照，定义/有条件概念按教材阅读支持；[Stata AIPW](https://www.stata.com/manuals/causalteffectsaipw.pdf) pp1–5定向文档核查；[Lin–Han arXiv v2](https://arxiv.org/html/2410.23525v2) §§2–3、Assumptions3.1/3.2/4.1、Theorem3.3，发散M且Mlog(n)/n→0、log(n/M)/M→0，BC另需M/n^γ→0等文内条件。理论读的是v2非最终刊版全证明；未执行匹配或bootstrap。调整集依据见[因果图参考](causal-graphs-adjustment.md)。

@@ -33,3 +33,16 @@
 阶条件、满秩条件与恰足/过度识别分开；DWH零假设为被检验变量外生。J考察同一参数下联合矩限制，不拒绝不证明每个工具有效，拒绝也不自动定位坏工具；异质工具可能不识别共同斜率。比较手工/自动检验前统一样本、控制、工具和VCE，不将不同样本的结果差归因于robust选项。
 
 来源：[988](https://www.lianxh.cn/details/988.html)、1351；[官方后估计](https://www.stata.com/manuals/rivregresspostestimation.pdf?public=1) overid/endogenous。教程变量/样本不一致为静态发现，修正后的数值未执行。
+
+
+## 基础对象：分派、经济排除、矩与依从类型
+
+将工具分派与相关潜在变量的独立/均值限制、Y(d,z)=Y(d)的经济排除、总体相关/秩及强度分开。对线性Y=D′β+X′γ+u，在同一X残差化后需适当有效矩及rank E[Ztilde Dtilde′]=K；排除工具数L≥K只是必要阶条件，逐个FS非零不保证满列秩。这是线性矩框架的整理，不推广为任意非线性识别定理。
+
+单工具、同控制/样本/权重的线性IV满足Cov(Ztilde,Ytilde)/Cov(Ztilde,Dtilde)=RF/FS，分母非零；二元无控制基准化为差均值Wald。手工拟合值第二步可给同一点估计，常规OLS SE却不自动正确，正式IV推断使用结构残差并匹配实际VCE。弱分母还可能放大违反排除/分派的影响，不由robust选项修复。
+
+二元Z,D在一致性、独立性、排除、非零FS及D(1)≥D(0)下，Wald识别{D(1)=1,D(0)=0}的LATE，不是观测D=1者ATT或总体ATE；负向单调先重标。允许defiers时比率为[P(C)τ_C−P(F)τ_F]/[P(C)−P(F)]，可离开两类效应区间；正FS不排除defiers。连续剂量、多工具及线性控制要另审边际/权重，不照搬二元口诀。分解权重和为1不保证非负，也未必是complier人口比例。
+
+抽签/政策offer的ITT与实际接受的LATE分账；实际接受和结局观测是两层不同选择。仅保留参保者、响应者或就业者可能破坏原分派可比性；无defiers与选择单调不是同一假设，IV不自动修复缺失结局或提供选择界限。需求结构斜率也不同于均衡点连线：外生供给移动若满足需求排除/分派与相关性，可提供需求方变异，不能要求所有供给因素一律固定。
+
+来源：Cunningham[第一版第7章](https://mixtape-1ed.netlify.app/07-instrumental_variables) §§7.2–7.3、7.6–7.8，以及[第1章](https://mixtape-1ed.netlify.app/01-introduction) §1.4和[第4章](https://mixtape-1ed.netlify.app/04-potential_outcomes) §§4.1.4–4.1.5，2026-10-15快照。以上是教材有条件概念及明确线性代数/二元分解整理；不是一般多IV异质权重定理、原应用或研究代码复现。工具/权重的玩具反例只检验该逻辑，不升级为完整证明。分派基础见[潜在结果参考](potential-outcomes-assignment.md)。

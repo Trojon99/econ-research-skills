@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.8`
+**Current version:** `v0.4.9`
 
 **Maintenance status:** Actively maintained
 
@@ -148,3 +148,8 @@ Structural and quantitative research now has a dedicated workflow. Dedicated mac
 ## License
 
 No license has been added. Public visibility permits reading but does not itself grant an open-source reuse license. Any licensing change requires an explicit owner decision.
+
+
+## Causal and regression foundations
+
+On-demand foundations now cover [causal graphs and adjustment](causal-inference/references/causal-graphs-adjustment.md), [potential outcomes and assignment-based inference](causal-inference/references/potential-outcomes-assignment.md), and [conditional means, projection and inference](econ-descriptive-analysis/references/regression-projection-inference.md). Existing matching, RD, IV, DID/DDD and synthetic-control references integrate bounded conceptual refinements without replacing modern methods or local overlays. Stable textbook definitions and concepts can remain reading-level knowledge; scoped primary checks are distinguished from complete proofs and source-software execution.

@@ -4,6 +4,17 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.9] - 2026-10-15
+
+### Added
+- Three foundational references connecting causal graphs/adjustment, potential outcomes/assignment, and conditional means/linear projection/inference.
+- Bounded extensions to matching/weighting, RD, IV, DID/DDD and synthetic-control topics; minimal routes under existing skills, with no new top-level module.
+
+### Boundaries
+- Distilled from the requested first-edition Mixtape website snapshot and scoped supporting sources, not a chapter-summary collection or public errata catalogue.
+- Textbook definitions and conditional concepts may retain reading-level evidence; calculations and documentation checks do not certify full proofs, original applications, current installations or source-code replication.
+- Private coverage, source caches, promotion decisions and project overlays remain outside the repository; transparent exploratory specifications remain supported.
+
 ## [0.4.8] - 2026-10-15
 
 ### Added

@@ -163,3 +163,8 @@ Load `references/nonlinear-binned-functions.md` on demand for nonlinear binned f
 ## Targeted learning and outcome audits
 
 - `references/bounded-quantile-outcomes.md`: load for its named target and assumptions; tutorial reading, selected primary-source checks and unexecuted software remain distinct.
+
+
+## Regression foundations routing
+
+- `references/regression-projection-inference.md`: load for CEF versus structural errors, linear projection/FWL, fixed-effects equivalence, coefficient contrasts and variance/inference objects; algebraic identities do not establish causal identification.

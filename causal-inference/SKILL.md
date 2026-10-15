@@ -201,3 +201,9 @@ Load `references/applied-estimand-inference.md` on demand for applied estimands,
 - `references/dynamic-panel-moments.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
 - `references/matching-weighting-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
 - `references/survival-riskset-audit.md`: load for this topic; retain its model, reading-scope and implementation boundaries.
+
+
+## Causal foundations routing
+
+- `references/causal-graphs-adjustment.md`: load for DAG path rules, adjustment sets, selection nodes and the graph-to-potential-outcome bridge.
+- `references/potential-outcomes-assignment.md`: load for estimands, selection decompositions, treatment versions, assignment mechanisms and Fisher randomization inference; retain source/check boundaries.

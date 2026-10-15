@@ -43,3 +43,14 @@ QRF由树叶邻域构造训练响应的条件分布；树间算法波动不代�
 - [Matrix Completion Methods for Causal Panel Data Models](https://www.nber.org/system/files/working_papers/w25132/w25132.pdf)：§§4–5.1 and Remark5.1, §8.1–8.5; PDFpp14–19,30–34。版本/范围：NBER WP25132 October2018,50 PDF pages; NOT 2021 JASA final；仅相关段落/静态文档核查，非全证明或软件运行。
 
 二手阅读背景：[1693](https://www.lianxh.cn/details/1693.html)、[1279](https://www.lianxh.cn/details/1279.html)、[1661](https://www.lianxh.cn/details/1661.html)、[1128](https://www.lianxh.cn/details/1128.html)、[385](https://www.lianxh.cn/details/385.html)、[370](https://www.lianxh.cn/details/370.html)、[178](https://www.lianxh.cn/details/178.html)、[145](https://www.lianxh.cn/details/145.html)。这些是相应组文字正文阅读记录；不是所有图片已读。相关组图像未完整查看；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。
+
+
+## 经典SC的目标、插值与placebo口径
+
+经典SC先用donor加权路径估计处理单位缺失的未处理结果；在可信识别条件下，逐期gap（实际结果减合成未处理结果）估计该单位该期的处理效应，而非未处理结果水平。该效应不自动是总体ATE或可迁移结构参数。W≥0、ΣW=1使同年合成结果处于donor结果凸包；避免的是负权/超额权的横截面线性外推，不消除前期到后期的预测结构外推或跨人口外部有效性。目标函数最优不一般保证W唯一。donor资格、政策包/结果单位与处理时点先于优化，低前期误差也不排除处理日独有冲击或donor污染。
+
+训练/预测平均/优化误差期均须与首暴露期明确对齐，显式给出的年份不会因选项叫pre而自动安全。跨语言核X1/X0预测矩阵及Z1/Z0拟合结果矩阵：将若干年份均值作为一行，与各年分别入行不是同一规格；再对齐donor、缺失规则、V及其优化。假处理日的时间外检验用假日期前训练、真实处理前验证，不认证真实政策日无差异冲击。
+
+为前/后窗口分别定义MSPE=Σgap²/实际期数，RMSPE=√MSPE。相同集合且pre>0时，post/pre MSPE比是RMSPE比的平方，排名相同但数值/筛选阈值不同；比率丢失方向，近零pre误差使它不稳定。所查SCtools作者源码的mspe.test按前期MSPE筛除，用含treated的实际保留集合和≥ties计算比例；不能填入同数值的RMSPE倍数或写死分母。是否把原treated返回placebo donor还需核具体构造，接口名不保证相同设计。
+
+来源：Cunningham[第一版第10章](https://mixtape-1ed.netlify.app/10-synthetic_control) §§10.1–10.2，2026-10-15快照，经典SC有条件概念；[Synth dataprep](https://raw.githubusercontent.com/cran/Synth/master/man/dataprep.Rd) Arguments/Details/Value定向核special.predictors及X/Z定义；[SCtools mspe.test作者源码](https://raw.githubusercontent.com/bcastanho/SCtools/master/R/mspe.test.R) 函数体/返回值，作者master快照而非本机/CRAN版等价认证。只静态读源码，未运行SC、placebo或下载应用数据。精确RI的条件另见[分派参考](potential-outcomes-assignment.md)，不将此比例自动解释为非随机政策的exact p值。

@@ -43,3 +43,18 @@ IV-WAOSS还需工具排除限制、第一阶段/约化式条件趋势、单调�
 [连享会1340](https://www.lianxh.cn/details/1340.html)与[McConnell v1](https://arxiv.org/html/2308.00167v1) §2/命题1的绝对值反号条件缺方向限制。独立标准库反例：四格确定正值10、20、20、29满足该绝对值不等式，但levels=-1且log DID=-0.3215836241，同为负。对算术四格比例比，正分母下需方向条件alpha4*(alpha1*alpha4-alpha2*alpha3)<0；真正E[logY]还依组内分布。反例不是作者代码运行或实证复现。
 
 迁移DID实现先对齐单位/时间、缺失/单例、权重、自由度、对照及各horizon支持。DID2S第一阶段仅未处理，生成误差需进入正确两阶段推断；软件相同公式不证明同一estimand。来源：[1895](https://www.lianxh.cn/details/1895.html)；[PyFixest官方](https://pyfixest.org/tutorials/difference-in-differences.html)指定段、[Butts–Gardner](https://journal.r-project.org/articles/RJ-2022-048/)方法/聚合段。教程watermark/发布版不同，精确LP-DID API未恢复，未执行。
+
+
+## 均值趋势、第三差分与动态构成
+
+在同一人群/尺度、无提前反应及干净对照等条件下，2×2总体DID=ATT+{E[ΔY(0)|T]−E[ΔY(0)|C]}；样本四格差仍有抽样/分派波动。按水平或收益选择不必破坏Y(0)均值PT；按暂时冲击/未来增长选择则可能失败。该均值限制不普遍等价静态FE的全路径strict exogeneity，异质处理反应也不等于未处理趋势失败。
+
+DDD=DID_eligible−DID_comparison，关键是无处理时eligible−comparison差距在处理/对照地区趋势可比，而非要求两个DD各自无偏。两个DD可有相同偏误并抵消，placebo DD非零不单独否定DDD；须另审其他格子的处理/溢出、尺度、composition和无提前反应。按2×2×2写清全部低阶项或解释等价吸收，不因回归叫DDD就默认实现了第三维。
+
+第三维对照的暴露须按实际cohort×time复查，近年龄组可能共享冲击也可能被溢出或后来暴露。重复截面/完整平衡面板的筛选会改目标；若政策改变谁出生/被观测，cohort率的改变含composition，不无条件解释成固定同一组人的平均作用。
+
+把公告、生效、实际暴露和提前反应分开；归零期若已受处理，leads相对它不等于纯未处理差异。不强制删过渡期，探索版本分别记账。每个horizon保留贡献cohort、对照、样本/处理簇及归零期；先识别cohort-time效应再按问题聚合，完整协方差进入SE。限制长期支持或平衡事件窗口会改构成/目标，不能平均污染TWFE系数来修偏误。
+
+改变面板窗口可同时改2×2效应和分解权重，系数变化不一概是混杂变化。late-on-early比较的动态污染是早组ATT在两个比较期的signed增量的相反数，汇总还乘实际比较权重；绝对值增大不普遍推出负bias。非负2×2比较权重和可能为负的ATT展开权重继续分开，不扩展最简分解到任意控制、反转或不平衡面板。
+
+来源：Cunningham[第一版第9章](https://mixtape-1ed.netlify.app/09-difference_in_differences) §§9.2、9.4–9.6，2026-10-15快照；[Olden–Møen](https://academic.oup.com/ectj/article/25/3/531/6545797)，Econometrics Journal2022，§5 Eqs5.1–5.7，定向原源核gap-PT而非全文证明。cohort聚合另对照[CS作者稿](https://arxiv.org/html/1803.09015) §3.1.1 Eq3.4；未执行作者实现。signed污染只作指定代数比较，未重估应用。当前软件选项/安装版另核，不由这份第一版阅读更新整个现代DID前沿。
