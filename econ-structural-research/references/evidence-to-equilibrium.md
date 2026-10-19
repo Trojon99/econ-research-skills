@@ -42,4 +42,16 @@ IMF WP/25/155所读§2、§3将财政度量与政策计数—错配相关分析�
 
 - [Industrial Policy in China: Quantification and Impact on Misallocation](https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025155-source-pdf.pdf)：§2 pp9—12 land/Total Size/caveats；p4潜在收益遗漏；§3 pp12—14模型、式1—2及associations声明；p19 Aggregate TFP Impact。版本/范围：IMF WP/25/155, August2025；PDF注明作者列表08/15/2025更新；仅相关段落/静态文档核查，非全证明或软件运行。
 
-二手阅读背景：[1848](https://www.lianxh.cn/details/1848.html)、[900](https://www.lianxh.cn/details/900.html)、[331](https://www.lianxh.cn/details/331.html)、[13](https://www.lianxh.cn/details/13.html)、[1545](https://www.lianxh.cn/details/1545.html)、[1465](https://www.lianxh.cn/details/1465.html)、[1389](https://www.lianxh.cn/details/1389.html)、[791](https://www.lianxh.cn/details/791.html)。这些是相应组文字正文阅读记录；不是所有图片已读。生产组记录9幅实质图已查看，其余相关组图像大多未读；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。
+## 地方冲击、外部机会与迁移弹性
+
+**来源及范围。** Borusyak、Dix-Carneiro、Kovak，[NBER w35921](https://www.nber.org/papers/w35921)，*Understanding Migration Responses to Local Shocks*，2026-10-19发行、October 2026版本。全部77页PDF提取文本（正文及附录A–D）已读；承重定位为PDF pp.15–22、52、62。未完整视觉核验公式/图像、独立证明定理或复现模拟；工作论文结论保留暂定性。
+
+**先定义完整干预。** 区分只改变一个地区、改变整组地区×行业冲击，以及把人口变化投影到本地shift-share暴露所得斜率。作者模型中，工人比较本地与相连外部市场机会；直接迁移近似把响应写成迁移弹性/劳动需求弹性、当地迁移强度、本地与外部机会冲击之差的乘积。外部市场包括潜在迁出者的目的地和潜在迁入者的来源地，不只是地理邻居。
+
+**暴露审计。** 本地行业存量份额不必等于响应边际的行业权重；模型中的权重涉及迁移流量。行业转换摩擦又可能使两地工人面对同一行业冲击，抵消迁移诱因。作者的Gumbel选择结构将边际工人密度与无冲击流量联系起来；观察到历史流量不自动给出非参数充分统计量。助手建议使用可辩护的事前网络并检验时期与分类敏感性，不按政策后的迁移者重新加权来追求更大系数。
+
+**识别和反事实边界。** 即使冲击外生，传统斜率也不是可任意搬到新冲击向量上的迁移参数；但作者所谓衰减因子并不保证总小于一（PDF p.21）。未知需求冲击缩放下，Taylor近似只识别缩放×迁移弹性/需求弹性的组合；NLLS理论上可分离但作者报告其模拟中很弱（p.52）。纯行业冲击的Taylor识别还要求地区与行业选择的关联在来源市场聚合后不消失；同时存在两种流动仍不充分（p.62）。这些限定不能被优化收敛或高拟合度替代。
+
+**威胁→诊断→残余限制。** 遗漏相对机会→对照本地/外部暴露和共同冲击→额外空间控制不自动恢复结构对象；网络测量和留样选择→核对存量流量共同风险集、行列和及样本进出→内部记账一致不消除选择；近似与低功效→在同一目标下分别比较噪声、近似误差和预测误差→校准DGP中的性能不等于现实历史政策验证。文中巴西和德国定量比较主要是真实网络校准的模拟，不能称为重新识别两国历史政策的人口效应；也不直接识别福利。
+
+既有配置与生产主题的二手阅读背景（不属于上述迁移论文证据）：[1848](https://www.lianxh.cn/details/1848.html)、[900](https://www.lianxh.cn/details/900.html)、[331](https://www.lianxh.cn/details/331.html)、[13](https://www.lianxh.cn/details/13.html)、[1545](https://www.lianxh.cn/details/1545.html)、[1465](https://www.lianxh.cn/details/1465.html)、[1389](https://www.lianxh.cn/details/1389.html)、[791](https://www.lianxh.cn/details/791.html)。这些是相应组文字正文阅读记录；不是所有图片已读。生产组记录9幅实质图已查看，其余相关组图像大多未读；本次只审报告、逐条台账及承重原源选段，不重新爬取文章、重做全部证明或运行来源程序。

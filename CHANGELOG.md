@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.10] - 2026-10-20
+
+### Changed
+- Extended existing preference-elicitation guidance with subjective-rating calibration assumptions, few-question measurement error, and coefficient-ratio interpretation boundaries, grounded in NBER w35925.
+- Extended evidence-to-equilibrium guidance with migration outside options, network-consistent exposure, and parameter-combination identification, grounded in NBER w35921.
+
+### Boundaries
+- Provisional working-paper lessons based on extracted-text reading and scoped original-source checks; no author-code replication, complete visual audit, or independent proof certification.
+- Independent web appendices for w35925 remain unread. Private ledgers, full papers and project overlays are not published; no core identification rule or research agenda changed.
+
 ## [0.4.9] - 2026-10-15
 
 ### Added
