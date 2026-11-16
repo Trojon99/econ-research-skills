@@ -4,6 +4,16 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.11] - 2026-11-17
+
+### Changed
+- Extended causal measurement guidance with a sample-and-clock crosswalk for auxiliary insurance coverage and selected utilization evidence, grounded in NBER w36033.
+- Preserved the distinction between program enrollment, net coverage, induced service use and a health-effect estimand; added minimal reference routing.
+
+### Boundaries
+- Main-text and selected appendix reading only; no full visual audit or estimation replication. Working-paper evidence remains provisional.
+- No private overlays, papers, task ledgers or research project records are published; no core identification rules are rewritten.
+
 ## [0.4.10] - 2026-10-20
 
 ### Changed
