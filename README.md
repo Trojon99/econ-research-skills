@@ -1,6 +1,6 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.13`
+**Current version:** `v0.4.14`
 
 **Maintenance status:** Actively maintained
 
@@ -16,7 +16,7 @@ Reusable AI skills for economics research: research design, causal inference, de
 | --- | --- |
 | [econ-research-design](econ-research-design/SKILL.md) | Develop and stress-test research questions, literature positioning, evidence strategies, contributions, and preference-elicitation designs. |
 | [causal-inference](causal-inference/SKILL.md) | Design and audit causal identification, estimands, inference, and implementation choices. |
-| [econ-descriptive-analysis](econ-descriptive-analysis/SKILL.md) | Produce graph-first descriptive analysis, sample diagnostics, and relative-time parallel-trends figures. |
+| [econ-descriptive-analysis](econ-descriptive-analysis/SKILL.md) | Produce graph-first descriptive analysis, subgroup rate decompositions, sample diagnostics, and relative-time parallel-trends figures. |
 | [econ-structural-research](econ-structural-research/SKILL.md) | Specify and identify structural models, estimate or calibrate parameters, validate solvers, and audit counterfactuals and welfare. |
 | [econ-project-workflow](econ-project-workflow/SKILL.md) | Organize reproducible economics projects across Stata, Python, R, Julia, and mixed-language workflows. |
 | [econ-paper-writer](econ-paper-writer/SKILL.md) | Draft and revise source-grounded economics prose and LaTeX while preserving the author's substantive meaning. |

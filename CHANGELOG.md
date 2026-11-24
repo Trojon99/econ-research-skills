@@ -4,6 +4,10 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.14] - 2026-11-24
+
+- Distinguish outcome coverage from joint subgroup coverage, and stacked contributions from within-group rates, in repeated cross-sectional figures.
+
 ## [0.4.13] - 2026-11-24
 
 - Extend existing audits with worked-example checks for loss of never-treated controls, row completeness, forecast origins, predicted count frequencies and raster validity.
