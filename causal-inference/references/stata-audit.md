@@ -42,7 +42,7 @@ Because syntax and package versions can change, verify current documentation or 
 Audit these concepts regardless of command:
 
 - cohort/first-treatment variable is correct;
-- never-treated values are coded as the command expects;
+- never-treated values are coded as the command expects. Test the *constructed formula inputs* as well as the raw cohort variable. For example, if a verified never-treated unit has a missing adoption year, the R expression `0 * (year >= NA)` is `NA`, not zero. Listwise deletion can silently remove the intended comparison group. Distinguish verified never-treated, verified treated and adoption status unknown; construct exposure separately for each and use the particular estimator's never-treated convention for relative time. Do not globally replace missing cohort or event time by zero. Compare group-by-calendar-period counts and the identities of retained controls before and after estimation. This is a failure case in a possible use of the [worked R example](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/econometrics/r-econometrics/SKILL.md#L99-L132), not a claim about the author's data; see [base R missing-value semantics](https://stat.ethz.ch/R-manual/R-devel/library/base/html/NA.html);
 - not-yet-treated observations are handled as intended;
 - treatment is absorbing if the estimator assumes it;
 - event time is defined relative to first treatment and not accidentally reset;

@@ -83,6 +83,10 @@ For empirical sections, check the logic in this order:
 
 Treat robustness checks as responses to named threats, not as an unexplained inventory. Treat mechanism evidence as evidence for a channel only to the degree that the auxiliary outcome, timing pattern, subgroup result, or additional design bears on that channel. Plain heterogeneity is not automatically mechanism identification.
 
+When a paragraph attributes a coefficient change to added controls, compare the estimation samples first. If observations also change, report both changes; the two columns alone do not isolate the role of the controls. Equal counts do not establish identical observations.
+
+For a claim that two groups respond differently, locate inference for the *difference* on the scale claimed. One estimate passing a significance threshold and another missing it does not test that difference; neither does visual overlap of their separate intervals. Without a reported contrast, describe the point estimates without claiming a statistically established gap.
+
 Use verbs that match the inferential object. For example, descriptive analysis can document a pattern; causal designs can estimate or identify an effect when their assumptions warrant it; models can imply or generate outcomes. Do not use a stronger verb to make a weak claim sound important.
 
 ## 7. Audit theory and structural prose
@@ -97,6 +101,8 @@ For model-based sections:
 - state which conclusions are model implications rather than direct empirical estimates.
 
 Do not invent an intuition, assumption role, or identification argument that the author has not supplied. If the omission is material, use the main skill's pause protocol.
+
+When a sequence problem is rewritten as a Bellman equation, trace each dated input into the recursive form. For example, if the wage varies by date, what lets the reader recover the relevant wage from the stated time or state? A suppressed subscript may be shorthand; check the author's definition before assuming a constant wage or adding a state variable.
 
 ## 8. Run the language linter
 
@@ -125,6 +131,7 @@ After a substantial rewrite, ask:
 - Is the main contribution still visible at the same substantive strength?
 - Did a secondary contribution, mechanism, data feature, design feature, key magnitude, or scope condition disappear?
 - Did the revision accidentally strengthen a descriptive statement into a causal one or turn a model implication into an empirical fact?
+- Read newly specific wording backwards: where does the source say who chose, who was required to act, or which diagnostic was run? Changing voluntary participation to compulsory assignment changes the comparison, even if the outcome and citation are unchanged. Restore the supported description rather than supplying a plausible design.
 - Are the comparison group, unit, sample, time period, and terminology still consistent?
 - Are citations, equations, labels, and LaTeX commands intact?
 
@@ -149,3 +156,5 @@ Prefer function, evidence, and reader comprehension over cosmetic regularity.
 ## Design provenance
 
 This reference was independently written after reviewing the public `juliaError/econ-TopJournal-writing-Skill` repository as one source of workflow ideas, especially its sentence-function, section-audit, and revision-linter organization. The source repository states that its original content is licensed CC BY-NC 4.0, with some third-party material under separate terms. This file does not reproduce its examples or long-form rules; it restates general editorial methods in a form designed for this skill's stricter source-grounding and research-design boundaries.
+
+The sample, recursive-notation and rewrite checks above are editorial readings of three illustrative passages in the Barrios Skills collection: the [specification table](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/academic-paper-writer/SKILL.md#L139-L152), [firm problem](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/latex-econ-model/SKILL.md#L152-L168), and [before/after prose](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/econ-humanizer/SKILL.md#L239-L255). The subgroup check draws on the collection's K-Dense [subgroup testing](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/scientific-critical-thinking/references/statistical_pitfalls.md#L70-L82) and [interval-overlap](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/scientific-critical-thinking/references/statistical_pitfalls.md#L325-L330) examples, not a visual rule for comparing estimates.

@@ -57,6 +57,8 @@ Test the connected argument:
 8. **Feasibility:** Can a cheap pilot resolve the largest uncertainty?
 9. **Audience:** Is there a group of economists for whom the answer matters?
 
+Before treating two mechanisms as rivals, ask whether they can operate together. A subsidy could raise enrollment through lower prices and reduce it through crowding; a near-zero net change does not distinguish weak channels from offsetting ones. Name an outcome or comparison on which the mechanisms predict different patterns (for example, applications versus admission conditional on applying), and state what else could move it, including changes in who applies. If the available data contain only the shared net outcome, report that the channels cannot be separated; do not rank them by fit to that outcome. Adapted from [Hypothesis Quality Criteria, Distinguishability](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/hypothesis-generation/references/hypothesis_quality_criteria.md#L156-L163).
+
 ## Match the Economic Design
 
 For reduced-form work, define the treatment or exposure, outcome, unit, timing, estimand, source of variation, identifying assumptions, threats, and interpretation of a null result.

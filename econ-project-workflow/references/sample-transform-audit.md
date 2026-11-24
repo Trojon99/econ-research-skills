@@ -8,6 +8,8 @@
 
 来源：[1375](https://www.lianxh.cn/details/1375.html)、[1749](https://www.lianxh.cn/details/1749.html)；[Stata逻辑FAQ](https://www.stata.com/support/faqs/data-management/true-and-false/)、[operators](https://www.stata.com/help.cgi?operators)、[missing](https://www.stata.com/help.cgi?missing)、[programming functions](https://www.stata.com/manuals/fnprogrammingfunctions.pdf) e(sample)。全部为文档语义，目标模型实际删样本需执行核验。
 
+完整案例是对**该规格所需变量**的布尔判断，不是“本行填了多少项”。例如三个数值字段中，`egen n_present = rownonmiss(a b c)` 返回 0 至 3；`if n_present` 会保留只填了一项或两项的行。把计数保留下来看部分缺失，再单独生成 `n_present == 3` 的标志；逐行对照该标志与估计样本，不一致时另查权重、滞后项、固定效应等退出原因。结构性不适用与应该观测却缺失分开编码，不因为例子有三个字段就要求每个研究对象三项齐全。参见 [Barrios 清洗示例的计数命名](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/econometrics/stata-data-cleaning/SKILL.md#L144-L152) 与 [Stata egen 手册](https://www.stata.com/manuals/degen.pdf)。
+
 ## 2. 缩尾先证明同一任务再比较速度
 
 保护原变量与阈值非缺失：上尾替换不能只写x>qhi；min/max忽略缺失参数，数学clip式不自动保留Stata缺失。记录分位点的样本/组键/算法/权重、阈值、改写量、原缺失与组缺失。全样本与分组缩尾不是同一计时任务；N/均值/SD一致不证明逐行相同。用含极小组、并列边界和扩展缺失的测试，按容差逐行比较后才计时。

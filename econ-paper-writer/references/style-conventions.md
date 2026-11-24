@@ -76,6 +76,8 @@ Follow the user's template or target-journal style first. Otherwise:
 - distinguish author calculations, externally sourced data, and reproduced material in source lines;
 - never add an unspecified control, estimator, source, or simulation detail merely to make a note look complete.
 
+Check whether a reader can tell what distinguishes adjacent regression columns without relying on their numbers. In this [illustrative table](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/writing-and-review/latex-tables/SKILL.md#L75-L93), two columns have the same control and fixed-effect flags and observation count but different estimates. Use the generating output to label the actual distinction in the header or note. If it is undocumented, ask for the model definitions; the coefficient change cannot identify it.
+
 ## Standardize numbers, units, dates, and citations
 
 - Keep units and rounding consistent across prose, equations, tables, and figures.

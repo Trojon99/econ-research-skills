@@ -4,6 +4,12 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.13] - 2026-11-24
+
+- Extend existing audits with worked-example checks for loss of never-treated controls, row completeness, forecast origins, predicted count frequencies and raster validity.
+- Trace search eligibility, citation corrections and potentially offsetting mechanisms. In editorial review, check sample and specification changes, subgroup contrasts, recursive notation and unsupported additions during rewriting.
+- Refines existing passages after a second comparison with the pinned Barrios material; no new skill, dependency or upstream code import.
+
 ## [0.4.12] - 2026-11-24
 
 - Add on-demand checks for partitioned and geospatial data, prediction splits, and the values actually shipped with a figure.

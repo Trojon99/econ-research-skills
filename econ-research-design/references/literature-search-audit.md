@@ -66,6 +66,8 @@ Prioritize papers that are closest in question, object, mechanism, evidence, or 
 
 Stop expanding when new searches mostly repeat the same anchor papers and claims, the closest-paper set is stable, and the remaining unknowns are stated. Do not call a search comprehensive unless its database coverage and procedure justify that claim.
 
+Keep the dates searched separate from the dates eligible for synthesis. For example, a [minimum-wage review template](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/research-tools/lit-review-assistant/SKILL.md#L76-L100) lists a 2010–2024 search and discusses a 1994 paper. Record how the older paper was found. If the date restriction applies only to the database query, screen the paper under the same eligibility criteria and label its retrieval route. If it applies to eligible studies, cite the paper as background without counting it in the synthesis, or document an amended rule and re-screen affected records. Do not assume the example establishes which route was used.
+
 ## Maintain an Evidence Ledger
 
 For each material claim, track:
@@ -80,5 +82,7 @@ For each material claim, track:
 | Limits | Coverage, version, access, or interpretation limits |
 
 Verify authors, year, title, version, and bibliographic details before presenting a citation. Never manufacture a DOI, URL, finding, quotation, or publication status.
+
+For a bibliography delivered with a review, reconcile in both directions: every citation in the text, tables, notes and supplements resolves to one intended entry; every **displayed** entry is cited or deliberately listed as further reading. Two keys may name one paper; two versions may support different claims. Inspect the actual edition and locator before merging. Unused entries in a shared `.bib` library need not be removed. For a pivotal result, check the publisher's update notice or [Crossmark](https://www.crossref.org/documentation/crossmark/) where available. If the cited estimate was corrected or retracted, revisit the claim and record the affected version; a resolving DOI or absence of a notice in an index is not a clean bill of health. See the [citation checklist, duplicate and final checks](https://github.com/Barrios88/barrios-skills/blob/680c98370381593141bf1d39da4353354958e2f0/skills/research-tools/citation-management/assets/citation_checklist.md#L150-L205).
 
 When sources conflict, report the disagreement and investigate whether it reflects different settings, estimands, samples, designs, models, or versions.
