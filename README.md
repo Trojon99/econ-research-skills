@@ -1,10 +1,10 @@
 # Econ Research Skills
 
-**Current version:** `v0.4.11`
+**Current version:** `v0.4.12`
 
 **Maintenance status:** Actively maintained
 
-**Last updated:** 2026-11-17
+**Last updated:** 2026-11-24
 
 **Source of truth:** GitHub `main`
 
@@ -21,6 +21,8 @@ Reusable AI skills for economics research: research design, causal inference, de
 | [econ-project-workflow](econ-project-workflow/SKILL.md) | Organize reproducible economics projects across Stata, Python, R, Julia, and mixed-language workflows. |
 | [econ-paper-writer](econ-paper-writer/SKILL.md) | Draft and revise source-grounded economics prose and LaTeX while preserving the author's substantive meaning. |
 | [seminar-companion](seminar-companion/SKILL.md) | Find the newest available paper version, provide an opening research briefing, and support live seminar discussion. |
+
+New workflow references cover [figure-source checks](econ-descriptive-analysis/references/data-pipeline-validation.md), [external data provenance](econ-project-workflow/references/external-data-provenance.md), and [manuscript handoff](econ-paper-writer/references/manuscript-handoff.md).
 
 ## Architecture and boundaries
 

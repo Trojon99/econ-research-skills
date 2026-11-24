@@ -212,3 +212,5 @@ Do not refactor merely for style. Preserve working project conventions unless a 
 ## Applied audit routing
 
 - `references/sample-transform-audit.md`: load on demand for the corresponding applied audit; source reading and static checks are not software execution or complete proof verification.
+
+Use [external data provenance](references/external-data-provenance.md) for indicator vintages, paginated searches, filing amendments or derived text measures. For cross-program FE reconciliation or effective-dated security links, see [data lifecycle](references/data-lifecycle-reproducibility.md).

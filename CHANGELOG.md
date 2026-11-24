@@ -4,6 +4,13 @@ This repository is actively maintained. Significant changes to skill behavior, r
 
 The project uses a lightweight Semantic Versioning convention. During `0.x`, MINOR releases may include architectural or naming changes while the skill system is still stabilizing. Starting with `1.0.0`, standard SemVer compatibility rules apply.
 
+## [0.4.12] - 2026-11-24
+
+- Add on-demand checks for partitioned and geospatial data, prediction splits, and the values actually shipped with a figure.
+- Trace data vintages, search coverage, filings and financial text to their source records. Reconcile actual estimation keys and inference settings across programs; audit effective-dated links before aggregation.
+- Trace numerical claims into referee reports, response letters and talks without turning an unread cell into a result or a conditional estimate into a causal headline.
+- Original topical guidance informed by the [Barrios Skills catalog](https://github.com/Barrios88/barrios-skills/tree/680c98370381593141bf1d39da4353354958e2f0); no third-party skill bundles, scripts, services or credentials installed. Seven core entrypoints retained.
+
 ## [0.4.11] - 2026-11-17
 
 ### Changed
